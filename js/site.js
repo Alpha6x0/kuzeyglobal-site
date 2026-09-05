@@ -189,11 +189,11 @@
   // ======================= TEKLIF FORMU =======================
 
   // Teklif taleplerinin gidecegi adres. Tek yerde tutulur.
-  // Teklif taleplerinin gidecegi adres. FormSubmit aktivasyon postasini da
-  // buraya gonderiyor; muhasebe@ kutusuna erisim zor oldugu icin sahibin
-  // kendi adresi kullaniliyor. Aktivasyon tamamlaninca FormSubmit'in verdigi
-  // rastgele jetonla degistirilecek -- boylece adres kaynakta gorunmez.
-  var POSTA = 'donmezemre6@gmail.com';
+  // FormSubmit jetonu. E-posta adresinin YERINE kullanilir: hicbir adres kaynak
+  // kodda (yorumlarda da) gecmedigi icin spam botlari toplayamaz. Jeton, site
+  // sahibinin kendi posta kutusuna baglidir; hedefi degistirmek icin FormSubmit
+  // uzerinden yeni jeton alinip buradaki dize guncellenir.
+  var POSTA = 'd6fb69efcb9809139271991928c9162a';
 
   var form = document.getElementById('teklifFormu');
   var formSonuc = document.getElementById('formSonuc');
@@ -203,7 +203,7 @@
       eksik: 'Lütfen şu alanları kontrol edin: ',
       alanAd: 'ad soyad', alanTel: 'geçerli telefon', alanEposta: 'geçerli e-posta', alanMesaj: 'proje detayı',
       gonderiliyor: 'Gönderiliyor...',
-      hata: 'Gönderilemedi. Lütfen doğrudan yazın: muhasebe@kuzeyglobalmuhendislik.com',
+      hata: 'Gönderilemedi. Lütfen doğrudan yazın: info@kuzeyglobalmuhendislik.com',
       tamam: function (isim) {
         return 'Teşekkürler ' + isim + '. Talebiniz iletildi, en kısa sürede dönüş yapacağız.';
       }
@@ -212,7 +212,7 @@
       eksik: 'Please check the following fields: ',
       alanAd: 'full name', alanTel: 'valid phone', alanEposta: 'valid e-mail', alanMesaj: 'project details',
       gonderiliyor: 'Sending...',
-      hata: 'Could not send. Please write directly: muhasebe@kuzeyglobalmuhendislik.com',
+      hata: 'Could not send. Please write directly: info@kuzeyglobalmuhendislik.com',
       tamam: function (isim) {
         return 'Thank you, ' + isim + '. Your request has been sent; we will get back to you shortly.';
       }
