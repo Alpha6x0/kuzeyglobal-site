@@ -189,7 +189,11 @@
   // ======================= TEKLIF FORMU =======================
 
   // Teklif taleplerinin gidecegi adres. Tek yerde tutulur.
-  var POSTA = 'muhasebe@kuzeyglobalmuhendislik.com';
+  // Teklif taleplerinin gidecegi adres. FormSubmit aktivasyon postasini da
+  // buraya gonderiyor; muhasebe@ kutusuna erisim zor oldugu icin sahibin
+  // kendi adresi kullaniliyor. Aktivasyon tamamlaninca FormSubmit'in verdigi
+  // rastgele jetonla degistirilecek -- boylece adres kaynakta gorunmez.
+  var POSTA = 'donmezemre6@gmail.com';
 
   var form = document.getElementById('teklifFormu');
   var formSonuc = document.getElementById('formSonuc');
