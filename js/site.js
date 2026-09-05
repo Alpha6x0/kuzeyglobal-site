@@ -267,6 +267,15 @@
         })
       }).then(function (y) {
         if (!y.ok) throw new Error('HTTP ' + y.status);
+        return y.json();
+      }).then(function (veri) {
+        // DIKKAT: FormSubmit basarisiz durumda da HTTP 200 doner; hatayi
+        // yalnizca govdedeki "success" alani soyler. Yalniz y.ok'a bakilirsa
+        // (form aktif degilse, gunluk sinir dolduysa) kullaniciya "talebiniz
+        // iletildi" yazilir ama hicbir e-posta gitmez. Bu yasandi.
+        if (veri && String(veri.success) === 'false') {
+          throw new Error(veri.message || 'FormSubmit reddetti');
+        }
         formSonuc.textContent = s.tamam(ad.split(' ')[0]);
         form.reset();
       }).catch(function () {
