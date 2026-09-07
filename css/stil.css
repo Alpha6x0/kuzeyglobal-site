@@ -61,7 +61,7 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+html { font-size: 106.25%; scroll-behavior: smooth; scroll-padding-top: 84px; }
 
 body {
   font-family: var(--yazi-govde);
@@ -743,6 +743,30 @@ p { color: var(--metin-yumusak); }
 @media (max-width: 720px) { .ges-serit-izgara { grid-template-columns: repeat(2, 1fr); } }
 
 /* --- Kaba/ince yapi bolumu: kart gorseli uzerindeki asama rozeti --- */
+/* --- Yapi bolumu: proje bloklari --- */
+.yapi-projeler { margin-top: 40px; }
+.yapi-projeler-baslik {
+  font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--metin-gri); margin-bottom: 22px;
+}
+.yapi-proje { margin-bottom: 34px; }
+.yapi-proje:last-child { margin-bottom: 0; }
+.yapi-proje-ust { margin-bottom: 14px; }
+.yapi-proje-ust h3 {
+  font-size: 1.1rem; margin-bottom: 6px;
+  padding-left: 14px; border-left: 3px solid var(--turuncu);
+}
+.yapi-proje-ust p { font-size: .92rem; color: var(--metin-gri); max-width: 74ch; }
+.yapi-proje .ges-serit-izgara { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.yapi-proje figure {
+  margin: 0; aspect-ratio: 4 / 3; overflow: hidden; border-radius: 10px;
+  border: 1px solid var(--cizgi);
+}
+.yapi-proje img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .5s ease; }
+.yapi-proje figure:hover img { transform: scale(1.06); }
+
+@media (max-width: 720px) { .yapi-proje .ges-serit-izgara { grid-template-columns: repeat(2, 1fr); } }
+
 .yapi-asama {
   position: absolute; left: 10px; top: 10px; z-index: 2;
   font-size: .68rem; font-weight: 700; letter-spacing: .04em;
@@ -818,7 +842,7 @@ p { color: var(--metin-yumusak); }
    768px'lik tablette (iPad dikey) 890px'e ulasip sayfayi yana kaydiriyordu.
    Hamburger artik 900px altinda devreye giriyor. Degerler 720px blogundakiyle
    ayni; o blok 720 altinda ayrica gecerli kalmaya devam ediyor. */
-@media (max-width: 980px) {
+@media (max-width: 1080px) {
   .menu {
     position: fixed; inset: 78px 0 auto; flex-direction: column; align-items: stretch; gap: 0;
     background: var(--murekkep-2); border-bottom: 1px solid var(--cizgi);
@@ -837,4 +861,4 @@ p { color: var(--metin-yumusak); }
    diye dort satira dusuyordu. Adres de 900px altinda gizlenir (alt bilgide ve
    iletisim bolumunde tam hali duruyor). */
 .ust-serit-sag a[href^="tel"] { white-space: nowrap; }
-@media (max-width: 980px) { .ust-serit-adres { display: none; } }
+@media (max-width: 1080px) { .ust-serit-adres { display: none; } }
