@@ -336,6 +336,47 @@
   if (disiplinSekmeleri.length) {
     var disiplinPanelleri = document.querySelectorAll('.disiplin-panel');
 
+    // Hizmet kartina tiklayinca o disiplinin sekmesi acilir ve kalem
+    // paneline inilir. Kart icindeki baglantilar (ornegin "GES bolumune
+    // git") kendi hedefine gitmeli, o yuzden onlar disarida birakilir.
+    function sekmeyeGit(panelKimlik) {
+      var sekme = null;
+      disiplinSekmeleri.forEach(function (s) {
+        if (s.getAttribute('data-panel') === panelKimlik) sekme = s;
+      });
+      if (!sekme) return;
+      sekme.click();
+
+      // Sekme degisince panel yuksekligi degisiyor; scrollIntoView bu
+      // sirada yarida kesilebiliyordu. Once yerlesim otursun, sonra
+      // hedef konum hesaplanip kaydirilsin.
+      var blok = document.querySelector('.disiplin');
+      if (!blok) return;
+      // Konumu elle hesaplamak yerine tarayiciya birakiliyor: gorseller
+      // yuklenirken sayfa yuksekligi degistigi icin elle hesaplanan hedef
+      // kayabiliyordu. Ust seridin altina inmemesi icin blokta
+      // scroll-margin-top tanimli.
+      requestAnimationFrame(function () {
+        blok.scrollIntoView({ block: 'start' });
+      });
+    }
+
+    document.querySelectorAll('.hizmet[data-disiplin]').forEach(function (kart) {
+      var hedef = kart.getAttribute('data-disiplin');
+
+      kart.addEventListener('click', function (olay) {
+        if (olay.target.closest('a')) return;
+        sekmeyeGit(hedef);
+      });
+
+      kart.addEventListener('keydown', function (olay) {
+        if (olay.key !== 'Enter' && olay.key !== ' ') return;
+        if (olay.target.closest('a')) return;
+        olay.preventDefault();
+        sekmeyeGit(hedef);
+      });
+    });
+
     disiplinPanelleri.forEach(function (panel) {
       panel.querySelectorAll('.kalem-dugme').forEach(function (dugme) {
         dugme.addEventListener('click', function () { kalemAc(panel, dugme); });

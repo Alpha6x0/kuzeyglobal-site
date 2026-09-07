@@ -310,7 +310,8 @@ p { color: var(--metin-yumusak); }
 /* ---------- hizmetler ---------- */
 
 /* --- Disiplin detay paneli: sekme -> kalem -> gorsel + metin --- */
-.disiplin { margin-top: 46px; }
+/* Ust serit sabit; kaydirma payi olmazsa blok basligi serit altinda kaliyor */
+.disiplin { margin-top: 46px; scroll-margin-top: 100px; }
 .disiplin-ust { margin-bottom: 20px; }
 .disiplin-baslik {
   font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
@@ -391,6 +392,17 @@ p { color: var(--metin-yumusak); }
   transform: scaleX(0); transform-origin: left; transition: transform .4s;
 }
 .hizmet:hover { transform: translateY(-6px); border-color: rgba(226, 96, 28, .35); box-shadow: var(--kart-golge); }
+/* Kart tiklanabilir: alttaki kalem paneline goturur */
+.hizmet[data-disiplin] { cursor: pointer; }
+.hizmet[data-disiplin]:focus-visible {
+  outline: 2px solid var(--turuncu); outline-offset: 3px;
+}
+.hizmet-ipucu {
+  display: inline-flex; align-items: center; gap: 6px; margin-top: 18px;
+  font-size: .78rem; font-weight: 600; color: var(--turuncu);
+}
+.hizmet-ipucu svg { width: 14px; height: 14px; transition: transform .3s ease; }
+.hizmet:hover .hizmet-ipucu svg { transform: translateX(3px); }
 .hizmet:hover::after { transform: scaleX(1); }
 /* --- Hizmet kartinda fotograf ---
    Kart dolgusu 38/32 px; gorsel kartin tepesine tam oturmasi icin negatif
