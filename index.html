@@ -423,9 +423,9 @@
     <div class="disiplin belir">
       <div class="disiplin-ust">
         <h3 class="disiplin-baslik" data-tr="Kalem kalem kapsam" data-en="Scope, item by item">Kalem kalem kapsam</h3>
-        <p data-tr="Her disiplinin altında hangi imalatın yapıldığı ve nasıl boyutlandırıldığı."
-           data-en="What each discipline covers and how every item is sized.">
-          Her disiplinin altında hangi imalatın yapıldığı ve nasıl boyutlandırıldığı.</p>
+        <p data-tr="Disiplini seçin, ardından kalemi seçin: o imalatın ne olduğunu ve sahada nasıl uygulandığını görün."
+           data-en="Pick a discipline, then an item: see what it is and how it is delivered on site.">
+          Disiplini seçin, ardından kalemi seçin: o imalatın ne olduğunu ve sahada nasıl uygulandığını görün.</p>
       </div>
       <div class="disiplin-sekmeler" role="tablist">
         <button class="disiplin-sekme etkin" type="button" role="tab" aria-controls="d-elektrik"
@@ -446,242 +446,551 @@
                 aria-selected="false" data-panel="d-ges" data-tr="GES" data-en="Solar">GES</button>
       </div>
       <div class="disiplin-panel etkin" id="d-elektrik" role="tabpanel">
-        <div class="disiplin-gorsel">
-          <img src="assets/gorseller/hz-elektrik.jpg" alt="Elektrik Tesisatı ve Enerji" loading="lazy">
+        <h3 class="disiplin-ad" data-tr="Elektrik Tesisatı ve Enerji" data-en="Electrical Systems &amp; Power">Elektrik Tesisatı ve Enerji</h3>
+        <div class="kalem-dugmeler">
+          <button class="kalem-dugme etkin" type="button" data-kalem="d-elektrik-og-ag"
+                  data-tr="OG / AG dağıtım" data-en="MV / LV distribution">OG / AG dağıtım</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-elektrik-trafo-merkezi"
+                  data-tr="Trafo merkezi" data-en="Substation">Trafo merkezi</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-elektrik-pano-imalati"
+                  data-tr="Pano imalatı" data-en="Switchgear fabrication">Pano imalatı</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-elektrik-kompanzasyon"
+                  data-tr="Kompanzasyon" data-en="Power factor correction">Kompanzasyon</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-elektrik-topraklama"
+                  data-tr="Topraklama · paratoner" data-en="Earthing &amp; lightning protection">Topraklama · paratoner</button>
         </div>
-        <div class="disiplin-govde">
-          <h3 data-tr="Elektrik Tesisatı ve Enerji" data-en="Electrical Systems &amp; Power">Elektrik Tesisatı ve Enerji</h3>
-          <ul class="disiplin-liste">
-            <li>
-              <b data-tr="OG / AG dağıtım" data-en="MV / LV distribution">OG / AG dağıtım</b>
-              <span data-tr="Trafo çıkışından son tüketiciye kadar kablo kesiti, gerilim düşümü ve kısa devre akımı hesaplanarak boyutlandırılan dağıtım şebekesi." data-en="Distribution network sized from the transformer to the final load through cable cross-section, voltage drop and short-circuit current calculations.">Trafo çıkışından son tüketiciye kadar kablo kesiti, gerilim düşümü ve kısa devre akımı hesaplanarak boyutlandırılan dağıtım şebekesi.</span>
-            </li>
-            <li>
-              <b data-tr="Trafo merkezi" data-en="Substation">Trafo merkezi</b>
-              <span data-tr="Kuru tip veya yağlı güç trafosu, orta gerilim hücre grubu ve kompanzasyon panosunun tek hacimde kurulumu." data-en="Dry-type or oil-immersed power transformer, medium-voltage switchgear and power factor panel installed in a single enclosure.">Kuru tip veya yağlı güç trafosu, orta gerilim hücre grubu ve kompanzasyon panosunun tek hacimde kurulumu.</span>
-            </li>
-            <li>
-              <b data-tr="Pano imalatı" data-en="Switchgear fabrication">Pano imalatı</b>
-              <span data-tr="Ana dağıtım, kompanzasyon ve MCC panolarının imalatı; bara kesiti ve kesici seçimi kısa devre akımına göre yapılır." data-en="Fabrication of main distribution, capacitor and MCC panels; busbar sizing and breaker selection follow the short-circuit rating.">Ana dağıtım, kompanzasyon ve MCC panolarının imalatı; bara kesiti ve kesici seçimi kısa devre akımına göre yapılır.</span>
-            </li>
-            <li>
-              <b data-tr="Kompanzasyon" data-en="Power factor correction">Kompanzasyon</b>
-              <span data-tr="Reaktif güç ölçümü, kondansatör kademelendirmesi ve harmonik seviyesine göre filtreli ya da filtresiz sistem seçimi." data-en="Reactive power measurement, capacitor staging, and filtered or unfiltered selection according to the measured harmonic level.">Reaktif güç ölçümü, kondansatör kademelendirmesi ve harmonik seviyesine göre filtreli ya da filtresiz sistem seçimi.</span>
-            </li>
-            <li>
-              <b data-tr="Topraklama · paratoner" data-en="Earthing &amp; lightning protection">Topraklama · paratoner</b>
-              <span data-tr="Toprak özdirenç ölçümü, temel topraklaması, eş potansiyel bara ve yıldırımdan korunma tesisatı; teslimde direnç değerleri ölçülür." data-en="Soil resistivity measurement, foundation earthing, equipotential bonding and lightning protection; resistance values are measured at handover.">Toprak özdirenç ölçümü, temel topraklaması, eş potansiyel bara ve yıldırımdan korunma tesisatı; teslimde direnç değerleri ölçülür.</span>
-            </li>
-          </ul>
-        </div>
+          <div class="kalem-detay etkin" id="d-elektrik-og-ag">
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/og-ag.jpg" alt="OG / AG dağıtım" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="OG / AG dağıtım" data-en="MV / LV distribution">OG / AG dağıtım</h4>
+              <p data-tr="Trafo çıkışından son tüketiciye kadar uzanan orta ve alçak gerilim dağıtım şebekesi." data-en="The medium- and low-voltage distribution network running from the transformer to the final load.">Trafo çıkışından son tüketiciye kadar uzanan orta ve alçak gerilim dağıtım şebekesi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Yük listesi çıkarılır, eşzamanlılık katsayısıyla talep gücü belirlenir. Kablo kesiti gerilim düşümü ve akım taşıma kapasitesine göre seçilir, kısa devre akımı hesaplanarak kesici kesme kapasiteleri doğrulanır. Kablo güzergâhları tava ve kanal detaylarıyla çizilir." data-en="Load schedules are prepared and demand is set with a diversity factor. Cable cross-sections follow voltage drop and current capacity, and short-circuit currents verify breaker breaking capacities. Routes are drawn with tray and duct details.">Yük listesi çıkarılır, eşzamanlılık katsayısıyla talep gücü belirlenir. Kablo kesiti gerilim düşümü ve akım taşıma kapasitesine göre seçilir, kısa devre akımı hesaplanarak kesici kesme kapasiteleri doğrulanır. Kablo güzergâhları tava ve kanal detaylarıyla çizilir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-elektrik-trafo-merkezi" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/trafo-merkezi.jpg" alt="Trafo merkezi" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Trafo merkezi" data-en="Substation">Trafo merkezi</h4>
+              <p data-tr="Güç trafosu, orta gerilim hücre grubu ve alçak gerilim panosunun bir arada kurulduğu merkez." data-en="The centre where the power transformer, MV switchgear and LV panel are installed together.">Güç trafosu, orta gerilim hücre grubu ve alçak gerilim panosunun bir arada kurulduğu merkez.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Trafo gücü talep gücüne ve gelecek yük artışına göre seçilir. Kuru tip ya da yağlı karar verilir, yağlıysa yağ toplama havuzu yapılır. Havalandırma kesiti trafo kaybına göre hesaplanır; hücre yerleşiminde manevra ve kaçış mesafeleri bırakılır." data-en="Transformer rating follows demand plus future growth. Dry or oil-immersed is decided; oil types get a containment pit. Ventilation is sized from transformer losses, and switchgear layout keeps operating and escape clearances.">Trafo gücü talep gücüne ve gelecek yük artışına göre seçilir. Kuru tip ya da yağlı karar verilir, yağlıysa yağ toplama havuzu yapılır. Havalandırma kesiti trafo kaybına göre hesaplanır; hücre yerleşiminde manevra ve kaçış mesafeleri bırakılır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-elektrik-pano-imalati" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/pano-imalati.jpg" alt="Pano imalatı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Pano imalatı" data-en="Switchgear fabrication">Pano imalatı</h4>
+              <p data-tr="Ana dağıtım, kompanzasyon ve motor kontrol panolarının atölyede imalatı." data-en="Workshop fabrication of main distribution, capacitor and motor control panels.">Ana dağıtım, kompanzasyon ve motor kontrol panolarının atölyede imalatı.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Tek hat şeması üzerinden bara kesiti ve kesici seçimi kısa devre akımına göre yapılır. Pano içi ısınma hesaplanır, gerekirse fan ve filtre eklenir. IP koruma sınıfı ortama göre belirlenir; imalat sonrası yalıtım direnci ve fonksiyon testleri yapılır." data-en="Busbar sizing and breaker selection follow the short-circuit rating on the single-line diagram. Internal heat rise is calculated and fans or filters added where needed. IP rating suits the environment; insulation resistance and function tests follow fabrication.">Tek hat şeması üzerinden bara kesiti ve kesici seçimi kısa devre akımına göre yapılır. Pano içi ısınma hesaplanır, gerekirse fan ve filtre eklenir. IP koruma sınıfı ortama göre belirlenir; imalat sonrası yalıtım direnci ve fonksiyon testleri yapılır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-elektrik-kompanzasyon" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-elektrik.jpg" alt="Kompanzasyon" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Kompanzasyon" data-en="Power factor correction">Kompanzasyon</h4>
+              <p data-tr="Reaktif güç bedelini önlemek için kondansatör gruplarıyla güç faktörünün düzeltilmesi." data-en="Correcting power factor with capacitor banks to avoid reactive energy penalties.">Reaktif güç bedelini önlemek için kondansatör gruplarıyla güç faktörünün düzeltilmesi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Önce şebekede reaktif güç ve harmonik ölçümü yapılır. Kondansatör kademeleri yük profiline göre belirlenir; harmonik seviyesi yüksekse reaktörlü (filtreli) tip seçilir. Devreye alma sonrası güç faktörü ölçülerek röle ayarları doğrulanır." data-en="Reactive power and harmonics are measured first. Capacitor stages follow the load profile; detuned (filtered) types are used where harmonics are high. Power factor is measured after commissioning and relay settings verified.">Önce şebekede reaktif güç ve harmonik ölçümü yapılır. Kondansatör kademeleri yük profiline göre belirlenir; harmonik seviyesi yüksekse reaktörlü (filtreli) tip seçilir. Devreye alma sonrası güç faktörü ölçülerek röle ayarları doğrulanır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-elektrik-topraklama" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-elektrik.jpg" alt="Topraklama · paratoner" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Topraklama · paratoner" data-en="Earthing &amp; lightning protection">Topraklama · paratoner</h4>
+              <p data-tr="Tesisin toprak bağlantısı ve yıldırımdan korunma tesisatı." data-en="The facility's earthing system and lightning protection installation.">Tesisin toprak bağlantısı ve yıldırımdan korunma tesisatı.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Toprak özdirenci ölçülerek elektrot tipi ve sayısı belirlenir. Temel topraklaması betonarme içine gömülür, eş potansiyel bara ile metal aksam birleştirilir. Paratoner koruma açısına göre yerleştirilir; teslimde topraklama direnci ölçülüp raporlanır." data-en="Soil resistivity determines electrode type and quantity. Foundation earthing is cast into the concrete and metalwork bonded to an equipotential bar. Air terminals are placed by protection angle; earth resistance is measured and reported at handover.">Toprak özdirenci ölçülerek elektrot tipi ve sayısı belirlenir. Temel topraklaması betonarme içine gömülür, eş potansiyel bara ile metal aksam birleştirilir. Paratoner koruma açısına göre yerleştirilir; teslimde topraklama direnci ölçülüp raporlanır.</span>
+              </p>
+            </div>
+          </div>
       </div>
       <div class="disiplin-panel" id="d-mekanik" role="tabpanel" hidden>
-        <div class="disiplin-gorsel">
-          <img src="assets/gorseller/hz-mekanik.jpg" alt="Mekanik Tesisat" loading="lazy">
+        <h3 class="disiplin-ad" data-tr="Mekanik Tesisat" data-en="Mechanical Installations">Mekanik Tesisat</h3>
+        <div class="kalem-dugmeler">
+          <button class="kalem-dugme etkin" type="button" data-kalem="d-mekanik-sihhi"
+                  data-tr="Sıhhi tesisat" data-en="Plumbing">Sıhhi tesisat</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-mekanik-isitma"
+                  data-tr="Isıtma sistemleri" data-en="Heating systems">Isıtma sistemleri</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-mekanik-dogalgaz"
+                  data-tr="Doğalgaz hattı" data-en="Natural gas lines">Doğalgaz hattı</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-mekanik-basincli-hava"
+                  data-tr="Basınçlı hava" data-en="Compressed air">Basınçlı hava</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-mekanik-pompa"
+                  data-tr="Pompa · hidrofor" data-en="Pumps &amp; boosters">Pompa · hidrofor</button>
         </div>
-        <div class="disiplin-govde">
-          <h3 data-tr="Mekanik Tesisat" data-en="Mechanical Installations">Mekanik Tesisat</h3>
-          <ul class="disiplin-liste">
-            <li>
-              <b data-tr="Sıhhi tesisat" data-en="Plumbing">Sıhhi tesisat</b>
-              <span data-tr="Temiz su, pis su ve yağmur suyu hatlarının debi, çap ve eğim hesabıyla projelendirilip basınç testiyle teslim edilmesi." data-en="Potable water, waste and rainwater lines designed by flow, diameter and gradient, handed over after pressure testing.">Temiz su, pis su ve yağmur suyu hatlarının debi, çap ve eğim hesabıyla projelendirilip basınç testiyle teslim edilmesi.</span>
-            </li>
-            <li>
-              <b data-tr="Isıtma sistemleri" data-en="Heating systems">Isıtma sistemleri</b>
-              <span data-tr="Isı kaybı hesabına göre kazan dairesi, kollektör grubu, radyatör veya yerden ısıtma devrelerinin kurulumu." data-en="Boiler room, manifold group and radiator or underfloor circuits installed according to the heat loss calculation.">Isı kaybı hesabına göre kazan dairesi, kollektör grubu, radyatör veya yerden ısıtma devrelerinin kurulumu.</span>
-            </li>
-            <li>
-              <b data-tr="Doğalgaz hattı" data-en="Natural gas lines">Doğalgaz hattı</b>
-              <span data-tr="Gaz teslim noktasından cihaza kadar hat imalatı, sertifikalı kaynak, sızdırmazlık testi ve gaz açma işlemleri." data-en="Pipework from the delivery point to the appliance, certified welding, tightness testing and gas commissioning.">Gaz teslim noktasından cihaza kadar hat imalatı, sertifikalı kaynak, sızdırmazlık testi ve gaz açma işlemleri.</span>
-            </li>
-            <li>
-              <b data-tr="Basınçlı hava" data-en="Compressed air">Basınçlı hava</b>
-              <span data-tr="Kompresör ve kurutucu seçimi; hat boyunca basınç kaybı hesaplanmış halka veya dallı dağıtım şebekesi." data-en="Compressor and dryer selection with a ring or branched network sized against calculated pressure loss.">Kompresör ve kurutucu seçimi; hat boyunca basınç kaybı hesaplanmış halka veya dallı dağıtım şebekesi.</span>
-            </li>
-            <li>
-              <b data-tr="Pompa · hidrofor" data-en="Pumps &amp; boosters">Pompa · hidrofor</b>
-              <span data-tr="Debi–basma yüksekliği eğrisine göre pompa seçimi ve frekans konvertörlü hidrofor gruplarının devreye alınması." data-en="Pump selection from the flow–head curve and commissioning of variable-frequency booster sets.">Debi–basma yüksekliği eğrisine göre pompa seçimi ve frekans konvertörlü hidrofor gruplarının devreye alınması.</span>
-            </li>
-          </ul>
-        </div>
+          <div class="kalem-detay etkin" id="d-mekanik-sihhi">
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/sihhi.jpg" alt="Sıhhi tesisat" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Sıhhi tesisat" data-en="Plumbing">Sıhhi tesisat</h4>
+              <p data-tr="Temiz su, pis su ve yağmur suyu hatlarının tesisi." data-en="Installation of potable water, waste and rainwater systems.">Temiz su, pis su ve yağmur suyu hatlarının tesisi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Temiz suda eşdeğer musluk sayısına göre debi, buna göre boru çapı seçilir. Pis suda eğim ve havalandırma kolonu hesaplanır, koku tıkacı derinlikleri kontrol edilir. Kapatmadan önce hatlar basınç ve sızdırmazlık testinden geçirilir." data-en="Clean water flow comes from fixture unit counts, setting pipe diameters. Waste lines are checked for gradient, vent stacks and trap seal depth. Lines are pressure and tightness tested before being closed up.">Temiz suda eşdeğer musluk sayısına göre debi, buna göre boru çapı seçilir. Pis suda eğim ve havalandırma kolonu hesaplanır, koku tıkacı derinlikleri kontrol edilir. Kapatmadan önce hatlar basınç ve sızdırmazlık testinden geçirilir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-mekanik-isitma" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/isitma.jpg" alt="Isıtma sistemleri" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Isıtma sistemleri" data-en="Heating systems">Isıtma sistemleri</h4>
+              <p data-tr="Kazan dairesi, kollektör grubu ve ısıtma devrelerinin kurulumu." data-en="Boiler room, manifold group and heating circuits.">Kazan dairesi, kollektör grubu ve ısıtma devrelerinin kurulumu.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Mahal bazlı ısı kaybı hesaplanır, cihaz kapasitesi buna göre seçilir. Kollektörde devreler dengelenir, radyatörlü sistemde vana ön ayarı yapılır. Yerden ısıtmada boru aralığı ve devre uzunluğu sınırı gözetilir; sistem yıkanıp havası alınarak devreye alınır." data-en="Room-by-room heat loss sets equipment capacity. Circuits are balanced at the manifold with pre-set valves on radiator systems. Underfloor loops respect pipe spacing and maximum circuit length; the system is flushed and vented at commissioning.">Mahal bazlı ısı kaybı hesaplanır, cihaz kapasitesi buna göre seçilir. Kollektörde devreler dengelenir, radyatörlü sistemde vana ön ayarı yapılır. Yerden ısıtmada boru aralığı ve devre uzunluğu sınırı gözetilir; sistem yıkanıp havası alınarak devreye alınır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-mekanik-dogalgaz" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-mekanik.jpg" alt="Doğalgaz hattı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Doğalgaz hattı" data-en="Natural gas lines">Doğalgaz hattı</h4>
+              <p data-tr="Gaz teslim noktasından cihaza kadar boru hattı ve gaz açma işlemleri." data-en="Pipework from the gas delivery point to the appliance, including commissioning.">Gaz teslim noktasından cihaza kadar boru hattı ve gaz açma işlemleri.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Cihaz kapasitesine göre hat çapı ve basınç düşümü hesaplanır. Kaynaklar sertifikalı personelle yapılır, hat basınçlı testle sızdırmazlık kontrolünden geçirilir. Kapalı hacimlerde havalandırma açıklıkları ve baca kesiti yönetmeliğe göre düzenlenir." data-en="Pipe diameter and pressure drop follow appliance capacity. Welding is done by certified personnel and the line is pressure tested for tightness. Ventilation openings and flue sizing in enclosed spaces follow regulation.">Cihaz kapasitesine göre hat çapı ve basınç düşümü hesaplanır. Kaynaklar sertifikalı personelle yapılır, hat basınçlı testle sızdırmazlık kontrolünden geçirilir. Kapalı hacimlerde havalandırma açıklıkları ve baca kesiti yönetmeliğe göre düzenlenir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-mekanik-basincli-hava" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-mekanik.jpg" alt="Basınçlı hava" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Basınçlı hava" data-en="Compressed air">Basınçlı hava</h4>
+              <p data-tr="Kompresör, kurutucu ve dağıtım şebekesi." data-en="Compressor, dryer and distribution network.">Kompresör, kurutucu ve dağıtım şebekesi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Tüketim noktalarının debisi toplanıp eşzamanlılıkla kompresör kapasitesi belirlenir. Hat çapı basınç kaybı hesabıyla seçilir, halka şebeke tercih edilir. Nem hassas üretimde kurutucu ve filtre kademeleri eklenir; kondens tahliyesi eğimli hatla çözülür." data-en="Consumption points are totalled with a diversity factor to size the compressor. Pipe diameter follows pressure-loss calculation, usually as a ring main. Dryers and filter stages are added for moisture-sensitive processes, with sloped lines for condensate.">Tüketim noktalarının debisi toplanıp eşzamanlılıkla kompresör kapasitesi belirlenir. Hat çapı basınç kaybı hesabıyla seçilir, halka şebeke tercih edilir. Nem hassas üretimde kurutucu ve filtre kademeleri eklenir; kondens tahliyesi eğimli hatla çözülür.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-mekanik-pompa" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/pompa.jpg" alt="Pompa · hidrofor" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Pompa · hidrofor" data-en="Pumps &amp; boosters">Pompa · hidrofor</h4>
+              <p data-tr="Su basıncını sağlayan pompa ve hidrofor gruplarının seçimi ve kurulumu." data-en="Selection and installation of pump and booster sets that maintain water pressure.">Su basıncını sağlayan pompa ve hidrofor gruplarının seçimi ve kurulumu.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="İhtiyaç debisi ve basma yüksekliği belirlenir, pompa eğrisi üzerinden çalışma noktası seçilir. Frekans konvertörlü grup kullanıldığında sabit basınç kontrolü ayarlanır. Titreşim takozları, esnek bağlantı ve çek valf yerleşimi su darbesini önleyecek şekilde yapılır." data-en="Required flow and head define the duty point on the pump curve. Variable-frequency sets are configured for constant pressure. Anti-vibration mounts, flexible connectors and check valves are arranged to prevent water hammer.">İhtiyaç debisi ve basma yüksekliği belirlenir, pompa eğrisi üzerinden çalışma noktası seçilir. Frekans konvertörlü grup kullanıldığında sabit basınç kontrolü ayarlanır. Titreşim takozları, esnek bağlantı ve çek valf yerleşimi su darbesini önleyecek şekilde yapılır.</span>
+              </p>
+            </div>
+          </div>
       </div>
       <div class="disiplin-panel" id="d-iklim" role="tabpanel" hidden>
-        <div class="disiplin-gorsel">
-          <img src="assets/gorseller/hz-iklim.jpg" alt="İklimlendirme ve Havalandırma" loading="lazy">
+        <h3 class="disiplin-ad" data-tr="İklimlendirme ve Havalandırma" data-en="HVAC &amp; Ventilation">İklimlendirme ve Havalandırma</h3>
+        <div class="kalem-dugmeler">
+          <button class="kalem-dugme etkin" type="button" data-kalem="d-iklim-vrf"
+                  data-tr="VRF · split sistem" data-en="VRF &amp; split systems">VRF · split sistem</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-iklim-klima-santrali"
+                  data-tr="Klima santrali" data-en="Air handling units">Klima santrali</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-iklim-kanal"
+                  data-tr="Kanal imalatı" data-en="Ductwork">Kanal imalatı</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-iklim-isi-yuku"
+                  data-tr="Isı yükü hesabı" data-en="Heat load calculation">Isı yükü hesabı</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-iklim-balanslama"
+                  data-tr="Test · balanslama" data-en="Testing &amp; balancing">Test · balanslama</button>
         </div>
-        <div class="disiplin-govde">
-          <h3 data-tr="İklimlendirme ve Havalandırma" data-en="HVAC &amp; Ventilation">İklimlendirme ve Havalandırma</h3>
-          <ul class="disiplin-liste">
-            <li>
-              <b data-tr="VRF · split sistem" data-en="VRF &amp; split systems">VRF · split sistem</b>
-              <span data-tr="İç ünite kapasitelerinin mahal bazlı ısı yüküne göre seçimi, bakır hat çekimi ve vakum sonrası gaz şarjı." data-en="Indoor unit capacities selected per room heat load, refrigerant piping installed, evacuated and charged.">İç ünite kapasitelerinin mahal bazlı ısı yüküne göre seçimi, bakır hat çekimi ve vakum sonrası gaz şarjı.</span>
-            </li>
-            <li>
-              <b data-tr="Klima santrali" data-en="Air handling units">Klima santrali</b>
-              <span data-tr="Taze hava oranı, ısı geri kazanım verimi ve filtre kademeleri belirlenmiş santral seçimi ve montajı." data-en="Unit selection and installation with defined fresh-air ratio, heat recovery efficiency and filter stages.">Taze hava oranı, ısı geri kazanım verimi ve filtre kademeleri belirlenmiş santral seçimi ve montajı.</span>
-            </li>
-            <li>
-              <b data-tr="Kanal imalatı" data-en="Ductwork">Kanal imalatı</b>
-              <span data-tr="Galvaniz sac kanal imalatı, ısı ve ses izolasyonu, menfez ile damper montajı." data-en="Galvanised sheet duct fabrication, thermal and acoustic insulation, grille and damper installation.">Galvaniz sac kanal imalatı, ısı ve ses izolasyonu, menfez ile damper montajı.</span>
-            </li>
-            <li>
-              <b data-tr="Isı yükü hesabı" data-en="Heat load calculation">Isı yükü hesabı</b>
-              <span data-tr="Yapı kabuğu, cam oranı, aydınlatma ve iç kazançlar üzerinden mahal bazlı soğutma ve ısıtma yükü." data-en="Room-by-room cooling and heating load derived from envelope, glazing ratio, lighting and internal gains.">Yapı kabuğu, cam oranı, aydınlatma ve iç kazançlar üzerinden mahal bazlı soğutma ve ısıtma yükü.</span>
-            </li>
-            <li>
-              <b data-tr="Test · balanslama" data-en="Testing &amp; balancing">Test · balanslama</b>
-              <span data-tr="Hava debilerinin anemometre ile ölçülüp damperlerle proje değerine getirilmesi ve rapora bağlanması." data-en="Air flows measured with an anemometer, adjusted to design values via dampers and recorded in a report.">Hava debilerinin anemometre ile ölçülüp damperlerle proje değerine getirilmesi ve rapora bağlanması.</span>
-            </li>
-          </ul>
-        </div>
+          <div class="kalem-detay etkin" id="d-iklim-vrf">
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/vrf.jpg" alt="VRF · split sistem" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="VRF · split sistem" data-en="VRF &amp; split systems">VRF · split sistem</h4>
+              <p data-tr="Değişken debili soğutucu akışkanlı ve split tipi iklimlendirme sistemleri." data-en="Variable refrigerant flow and split-type air conditioning systems.">Değişken debili soğutucu akışkanlı ve split tipi iklimlendirme sistemleri.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="İç ünite kapasiteleri mahal ısı yüküne göre seçilir, dış ünite eşzamanlılık oranı kontrol edilir. Bakır hat çapları ve maksimum hat uzunluğu üretici tablosuna göre belirlenir. Montaj sonrası vakum alınır, kaçak testi yapılır ve gaz şarjı tartılarak eklenir." data-en="Indoor capacities follow room loads and the outdoor unit's combination ratio is checked. Refrigerant line sizes and maximum lengths follow manufacturer tables. Systems are evacuated, leak tested and charged by weight.">İç ünite kapasiteleri mahal ısı yüküne göre seçilir, dış ünite eşzamanlılık oranı kontrol edilir. Bakır hat çapları ve maksimum hat uzunluğu üretici tablosuna göre belirlenir. Montaj sonrası vakum alınır, kaçak testi yapılır ve gaz şarjı tartılarak eklenir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-iklim-klima-santrali" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/klima-santrali.jpg" alt="Klima santrali" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Klima santrali" data-en="Air handling units">Klima santrali</h4>
+              <p data-tr="Taze hava, filtreleme ve ısı geri kazanımı yapan merkezi hava işleme üniteleri." data-en="Central units providing fresh air, filtration and heat recovery.">Taze hava, filtreleme ve ısı geri kazanımı yapan merkezi hava işleme üniteleri.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Kişi başı taze hava debisi ve mahal hacmine göre santral debisi belirlenir. Filtre kademeleri kullanım amacına göre seçilir; hastane gibi hacimlerde HEPA eklenir. Isı geri kazanım tipi iklim verisine göre kararlaştırılır, santral erişim ve filtre değişim mesafeleri bırakılarak yerleştirilir." data-en="Unit airflow comes from per-person fresh air rates and room volume. Filter stages suit the use; HEPA is added in spaces such as hospitals. Heat recovery type follows climate data, and units are placed with access and filter-change clearances.">Kişi başı taze hava debisi ve mahal hacmine göre santral debisi belirlenir. Filtre kademeleri kullanım amacına göre seçilir; hastane gibi hacimlerde HEPA eklenir. Isı geri kazanım tipi iklim verisine göre kararlaştırılır, santral erişim ve filtre değişim mesafeleri bırakılarak yerleştirilir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-iklim-kanal" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/kanal.jpg" alt="Kanal imalatı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Kanal imalatı" data-en="Ductwork">Kanal imalatı</h4>
+              <p data-tr="Havanın taşındığı galvaniz sac kanal sistemi ve menfezler." data-en="The galvanised sheet duct system and terminal grilles that carry the air.">Havanın taşındığı galvaniz sac kanal sistemi ve menfezler.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Kanal kesitleri sabit sürtünme yöntemiyle boyutlandırılır, hız gürültü sınırında tutulur. Flanş ve conta detayları sızdırmazlık sınıfına göre uygulanır. Isı kaybı olan güzergâhlarda izolasyon yapılır; yangın bölmesi geçişlerine damper konur." data-en="Duct sizes use the equal-friction method with velocities kept below noise limits. Flange and gasket details follow the required tightness class. Insulation is applied on routes with heat loss, and fire dampers are fitted at compartment crossings.">Kanal kesitleri sabit sürtünme yöntemiyle boyutlandırılır, hız gürültü sınırında tutulur. Flanş ve conta detayları sızdırmazlık sınıfına göre uygulanır. Isı kaybı olan güzergâhlarda izolasyon yapılır; yangın bölmesi geçişlerine damper konur.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-iklim-isi-yuku" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/isi-yuku.jpg" alt="Isı yükü hesabı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Isı yükü hesabı" data-en="Heat load calculation">Isı yükü hesabı</h4>
+              <p data-tr="Her mahal için gereken soğutma ve ısıtma kapasitesinin hesaplanması." data-en="Calculating the cooling and heating capacity required for each space.">Her mahal için gereken soğutma ve ısıtma kapasitesinin hesaplanması.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Duvar, çatı ve döşemenin ısı geçirgenlik katsayıları, cam oranı ve yönü, aydınlatma ile ekipman kazançları ve kişi sayısı girilir. Dış tasarım sıcaklıkları bölge verisinden alınır. Sonuç mahal listesi olarak çıkarılır; cihaz seçimi ve kanal boyutlandırması bu tablodan yürür." data-en="U-values of walls, roof and floor, glazing ratio and orientation, lighting and equipment gains and occupancy are entered, with outdoor design temperatures from regional data. The output is a room schedule that drives equipment selection and duct sizing.">Duvar, çatı ve döşemenin ısı geçirgenlik katsayıları, cam oranı ve yönü, aydınlatma ile ekipman kazançları ve kişi sayısı girilir. Dış tasarım sıcaklıkları bölge verisinden alınır. Sonuç mahal listesi olarak çıkarılır; cihaz seçimi ve kanal boyutlandırması bu tablodan yürür.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-iklim-balanslama" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-iklim.jpg" alt="Test · balanslama" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Test · balanslama" data-en="Testing &amp; balancing">Test · balanslama</h4>
+              <p data-tr="Sistemin proje değerlerinde çalıştığının ölçümle doğrulanması." data-en="Verifying by measurement that the system performs to design values.">Sistemin proje değerlerinde çalıştığının ölçümle doğrulanması.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Menfez ve kanal debileri anemometre ile ölçülür, damperlerle proje değerine getirilir. Fan devri gerekirse kasnak ya da frekans konvertörüyle düzeltilir. Sonuçlar mahal bazlı tabloya işlenir ve teslim dosyasına konur; sapma kalan noktalar rapora yazılır." data-en="Grille and duct flows are measured with an anemometer and set to design values via dampers. Fan speed is corrected by pulley or inverter where needed. Results are recorded room by room in the handover file, with any remaining deviations noted.">Menfez ve kanal debileri anemometre ile ölçülür, damperlerle proje değerine getirilir. Fan devri gerekirse kasnak ya da frekans konvertörüyle düzeltilir. Sonuçlar mahal bazlı tabloya işlenir ve teslim dosyasına konur; sapma kalan noktalar rapora yazılır.</span>
+              </p>
+            </div>
+          </div>
       </div>
       <div class="disiplin-panel" id="d-yangin" role="tabpanel" hidden>
-        <div class="disiplin-gorsel">
-          <img src="assets/gorseller/hz-yangin.jpg" alt="Yangın Algılama ve Söndürme" loading="lazy">
-            <span class="hizmet-temsili" data-tr="Temsili görsel" data-en="Representative image">Temsili görsel</span>
+        <h3 class="disiplin-ad" data-tr="Yangın Algılama ve Söndürme" data-en="Fire Detection &amp; Suppression">Yangın Algılama ve Söndürme</h3>
+        <div class="kalem-dugmeler">
+          <button class="kalem-dugme etkin" type="button" data-kalem="d-yangin-algilama"
+                  data-tr="Adresli algılama" data-en="Addressable detection">Adresli algılama</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-yangin-sprinkler"
+                  data-tr="Sprinkler" data-en="Sprinklers">Sprinkler</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-yangin-yangin-dolabi"
+                  data-tr="Yangın dolabı" data-en="Hose cabinets">Yangın dolabı</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-yangin-duman-tahliye"
+                  data-tr="Duman tahliye" data-en="Smoke exhaust">Duman tahliye</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-yangin-yangin-pompasi"
+                  data-tr="Yangın pompası" data-en="Fire pumps">Yangın pompası</button>
         </div>
-        <div class="disiplin-govde">
-          <h3 data-tr="Yangın Algılama ve Söndürme" data-en="Fire Detection &amp; Suppression">Yangın Algılama ve Söndürme</h3>
-          <ul class="disiplin-liste">
-            <li>
-              <b data-tr="Adresli algılama" data-en="Addressable detection">Adresli algılama</b>
-              <span data-tr="Dedektör ve buton yerleşimi, çevrim planı, panel programlaması ve senaryo testleri." data-en="Detector and call-point layout, loop planning, panel programming and cause-and-effect testing.">Dedektör ve buton yerleşimi, çevrim planı, panel programlaması ve senaryo testleri.</span>
-            </li>
-            <li>
-              <b data-tr="Sprinkler" data-en="Sprinklers">Sprinkler</b>
-              <span data-tr="Tehlike sınıfına göre sprinkler tipi ve koruma alanı seçimi; boru çapları hidrolik hesapla belirlenir." data-en="Sprinkler type and coverage selected by hazard class; pipe diameters set by hydraulic calculation.">Tehlike sınıfına göre sprinkler tipi ve koruma alanı seçimi; boru çapları hidrolik hesapla belirlenir.</span>
-            </li>
-            <li>
-              <b data-tr="Yangın dolabı" data-en="Hose cabinets">Yangın dolabı</b>
-              <span data-tr="Dolap yerleşiminin ve hortum erişim mesafelerinin yönetmelik şartlarına göre planlanması." data-en="Cabinet placement and hose reach distances planned to regulatory requirements.">Dolap yerleşiminin ve hortum erişim mesafelerinin yönetmelik şartlarına göre planlanması.</span>
-            </li>
-            <li>
-              <b data-tr="Duman tahliye" data-en="Smoke exhaust">Duman tahliye</b>
-              <span data-tr="Duman perdesi, jet fan veya kaçış yolu basınçlandırmasıyla tahliye güzergâhının temiz tutulması." data-en="Smoke curtains, jet fans or stairwell pressurisation keeping escape routes clear.">Duman perdesi, jet fan veya kaçış yolu basınçlandırmasıyla tahliye güzergâhının temiz tutulması.</span>
-            </li>
-            <li>
-              <b data-tr="Yangın pompası" data-en="Fire pumps">Yangın pompası</b>
-              <span data-tr="Ana, yedek ve jokey pompa grubunun kurulumu; performans testi ve otomatik devreye girme kontrolü." data-en="Main, standby and jockey pump set installed, performance tested and verified for automatic start.">Ana, yedek ve jokey pompa grubunun kurulumu; performans testi ve otomatik devreye girme kontrolü.</span>
-            </li>
-          </ul>
-        </div>
+          <div class="kalem-detay etkin" id="d-yangin-algilama">
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-yangin.jpg" alt="Adresli algılama" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Adresli algılama" data-en="Addressable detection">Adresli algılama</h4>
+              <p data-tr="Her cihazın panelde ayrı adresle göründüğü yangın algılama sistemi." data-en="A fire detection system where every device appears at the panel with its own address.">Her cihazın panelde ayrı adresle göründüğü yangın algılama sistemi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Dedektör tipi mahale göre seçilir; mutfak ve otoparkta duman yerine ısı dedektörü kullanılır. Koruma alanı ve tavan yüksekliği sınırlarına göre yerleşim yapılır. Çevrim planı çizilir, panel programlanır ve senaryo testleriyle her cihazın doğru adresle alarm verdiği doğrulanır." data-en="Detector type suits the space: heat detectors replace smoke in kitchens and car parks. Layout follows coverage area and ceiling height limits. The loop is planned, the panel programmed, and cause-and-effect tests confirm each device alarms at the correct address.">Dedektör tipi mahale göre seçilir; mutfak ve otoparkta duman yerine ısı dedektörü kullanılır. Koruma alanı ve tavan yüksekliği sınırlarına göre yerleşim yapılır. Çevrim planı çizilir, panel programlanır ve senaryo testleriyle her cihazın doğru adresle alarm verdiği doğrulanır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-yangin-sprinkler" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/sprinkler.jpg" alt="Sprinkler" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Sprinkler" data-en="Sprinklers">Sprinkler</h4>
+              <p data-tr="Yangını başlangıç aşamasında otomatik söndüren yağmurlama sistemi." data-en="The automatic sprinkler system that suppresses fire at an early stage.">Yangını başlangıç aşamasında otomatik söndüren yağmurlama sistemi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Tehlike sınıfı belirlenir; buna göre sprinkler tipi, sıcaklık derecesi ve koruma alanı seçilir. Boru çapları hidrolik hesapla bulunur, en elverişsiz noktada gereken debi ve basınç doğrulanır. Askı aralıkları ve sismik bağlantılar uygulanır; sistem basınç testinden geçirilir." data-en="Hazard class sets sprinkler type, temperature rating and coverage. Pipe sizes come from hydraulic calculation, verifying flow and pressure at the most remote point. Hanger spacing and seismic bracing are applied, and the system is pressure tested.">Tehlike sınıfı belirlenir; buna göre sprinkler tipi, sıcaklık derecesi ve koruma alanı seçilir. Boru çapları hidrolik hesapla bulunur, en elverişsiz noktada gereken debi ve basınç doğrulanır. Askı aralıkları ve sismik bağlantılar uygulanır; sistem basınç testinden geçirilir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-yangin-yangin-dolabi" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-yangin.jpg" alt="Yangın dolabı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Yangın dolabı" data-en="Hose cabinets">Yangın dolabı</h4>
+              <p data-tr="İlk müdahale için hortum ve lansın bulunduğu dolap sistemi." data-en="Cabinets holding hose and nozzle for first-response intervention.">İlk müdahale için hortum ve lansın bulunduğu dolap sistemi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Dolaplar, hortum boyu her noktaya ulaşacak şekilde yerleştirilir; yerleşim kaçış yolu üzerinde ve görünür olur. Besleme hattı sprinkler hattından ayrı ya da ortak olabilir, hidrolik hesapta iki senaryo da kontrol edilir. Devreye alma sırasında lans ucunda basınç ölçülür." data-en="Cabinets are placed so hose length reaches every point, on escape routes and clearly visible. Supply may be separate from or shared with the sprinkler main; both scenarios are checked hydraulically. Nozzle pressure is measured at commissioning.">Dolaplar, hortum boyu her noktaya ulaşacak şekilde yerleştirilir; yerleşim kaçış yolu üzerinde ve görünür olur. Besleme hattı sprinkler hattından ayrı ya da ortak olabilir, hidrolik hesapta iki senaryo da kontrol edilir. Devreye alma sırasında lans ucunda basınç ölçülür.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-yangin-duman-tahliye" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-yangin.jpg" alt="Duman tahliye" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Duman tahliye" data-en="Smoke exhaust">Duman tahliye</h4>
+              <p data-tr="Yangında dumanı tahliye ederek kaçış yollarını görünür tutan sistem." data-en="Systems that extract smoke and keep escape routes visible during a fire.">Yangında dumanı tahliye ederek kaçış yollarını görünür tutan sistem.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Kapalı otoparkta jet fan ve egzoz fanı ile duman güzergâhı oluşturulur. Kaçış merdivenlerinde basınçlandırma yapılır, kapı açma kuvveti sınırı kontrol edilir. Fanlar yangın algılama paneline bağlanır; senaryo testinde fan, damper ve basınçlandırma birlikte denenir." data-en="Enclosed car parks use jet and exhaust fans to form a smoke path. Escape stairs are pressurised with door-opening force kept within limits. Fans are tied to the detection panel and tested together with dampers and pressurisation.">Kapalı otoparkta jet fan ve egzoz fanı ile duman güzergâhı oluşturulur. Kaçış merdivenlerinde basınçlandırma yapılır, kapı açma kuvveti sınırı kontrol edilir. Fanlar yangın algılama paneline bağlanır; senaryo testinde fan, damper ve basınçlandırma birlikte denenir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-yangin-yangin-pompasi" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-yangin.jpg" alt="Yangın pompası" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Yangın pompası" data-en="Fire pumps">Yangın pompası</h4>
+              <p data-tr="Söndürme sistemine gereken debi ve basıncı sağlayan pompa grubu." data-en="The pump set that supplies the required flow and pressure to the suppression system.">Söndürme sistemine gereken debi ve basıncı sağlayan pompa grubu.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Ana pompa hidrolik hesabın gerektirdiği debi ve basınca göre seçilir, yanına yedek ve jokey pompa konur. Elektrik kesintisine karşı dizel pompa değerlendirilir. Devreye alma sırasında performans eğrisi ölçülür ve pompanın basınç düşünce otomatik devreye girdiği doğrulanır." data-en="The main pump matches the hydraulic demand, with standby and jockey pumps alongside. A diesel pump is considered against power failure. Commissioning measures the performance curve and verifies automatic start on pressure drop.">Ana pompa hidrolik hesabın gerektirdiği debi ve basınca göre seçilir, yanına yedek ve jokey pompa konur. Elektrik kesintisine karşı dizel pompa değerlendirilir. Devreye alma sırasında performans eğrisi ölçülür ve pompanın basınç düşünce otomatik devreye girdiği doğrulanır.</span>
+              </p>
+            </div>
+          </div>
       </div>
       <div class="disiplin-panel" id="d-otomasyon" role="tabpanel" hidden>
-        <div class="disiplin-gorsel">
-          <img src="assets/gorseller/hz-otomasyon.jpg" alt="Zayıf Akım ve Otomasyon" loading="lazy">
-            <span class="hizmet-temsili" data-tr="Temsili görsel" data-en="Representative image">Temsili görsel</span>
+        <h3 class="disiplin-ad" data-tr="Zayıf Akım ve Otomasyon" data-en="Low Current &amp; Automation">Zayıf Akım ve Otomasyon</h3>
+        <div class="kalem-dugmeler">
+          <button class="kalem-dugme etkin" type="button" data-kalem="d-otomasyon-cctv"
+                  data-tr="CCTV · kamera" data-en="CCTV">CCTV · kamera</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-otomasyon-gecis-kontrol"
+                  data-tr="Geçiş kontrol" data-en="Access control">Geçiş kontrol</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-otomasyon-yapi-otomasyon"
+                  data-tr="Yapı otomasyonu" data-en="Building automation">Yapı otomasyonu</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-otomasyon-kablolama"
+                  data-tr="Yapısal kablolama" data-en="Structured cabling">Yapısal kablolama</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-otomasyon-seslendirme"
+                  data-tr="Seslendirme" data-en="Public address">Seslendirme</button>
         </div>
-        <div class="disiplin-govde">
-          <h3 data-tr="Zayıf Akım ve Otomasyon" data-en="Low Current &amp; Automation">Zayıf Akım ve Otomasyon</h3>
-          <ul class="disiplin-liste">
-            <li>
-              <b data-tr="CCTV · kamera" data-en="CCTV">CCTV · kamera</b>
-              <span data-tr="Kamera açısı, çözünürlük ve kayıt süresi hesaplanmış izleme sistemi; ağ ve depolama boyutlandırması dahil." data-en="Surveillance designed by field of view, resolution and retention, including network and storage sizing.">Kamera açısı, çözünürlük ve kayıt süresi hesaplanmış izleme sistemi; ağ ve depolama boyutlandırması dahil.</span>
-            </li>
-            <li>
-              <b data-tr="Geçiş kontrol" data-en="Access control">Geçiş kontrol</b>
-              <span data-tr="Kart veya biyometrik okuyucu, kapı donanımı ve yangın senaryosuyla entegre otomatik kilit açma." data-en="Card or biometric readers, door hardware and automatic release integrated with the fire scenario.">Kart veya biyometrik okuyucu, kapı donanımı ve yangın senaryosuyla entegre otomatik kilit açma.</span>
-            </li>
-            <li>
-              <b data-tr="Yapı otomasyonu" data-en="Building automation">Yapı otomasyonu</b>
-              <span data-tr="Isıtma, soğutma ve aydınlatmanın merkezi izlenmesi; zaman, sıcaklık ve varlık sensörüne bağlı senaryolar." data-en="Central monitoring of heating, cooling and lighting with schedule, temperature and occupancy scenarios.">Isıtma, soğutma ve aydınlatmanın merkezi izlenmesi; zaman, sıcaklık ve varlık sensörüne bağlı senaryolar.</span>
-            </li>
-            <li>
-              <b data-tr="Yapısal kablolama" data-en="Structured cabling">Yapısal kablolama</b>
-              <span data-tr="Kat dağıtım odaları, bakır ve fiber omurga; kanalların cihazla sertifikasyon ölçümü." data-en="Floor distribution rooms, copper and fibre backbone, with certified link testing.">Kat dağıtım odaları, bakır ve fiber omurga; kanalların cihazla sertifikasyon ölçümü.</span>
-            </li>
-            <li>
-              <b data-tr="Seslendirme" data-en="Public address">Seslendirme</b>
-              <span data-tr="Anons ve acil durum seslendirmesi; ses basıncı ve konuşma anlaşılabilirliği hesabına göre hoparlör yerleşimi." data-en="Public address and voice alarm with speaker layout set by sound pressure and speech intelligibility.">Anons ve acil durum seslendirmesi; ses basıncı ve konuşma anlaşılabilirliği hesabına göre hoparlör yerleşimi.</span>
-            </li>
-          </ul>
-        </div>
+          <div class="kalem-detay etkin" id="d-otomasyon-cctv">
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-otomasyon.jpg" alt="CCTV · kamera" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="CCTV · kamera" data-en="CCTV">CCTV · kamera</h4>
+              <p data-tr="Bina ve sahanın kamera ile izlenmesi ve kayıt altına alınması." data-en="Camera surveillance and recording of the building and site.">Bina ve sahanın kamera ile izlenmesi ve kayıt altına alınması.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Kamera tipi ve lens açısı, izlenecek alanın genişliğine ve tanıma-teşhis ihtiyacına göre seçilir. Kayıt süresi ve çözünürlükten depolama kapasitesi hesaplanır. Ağ anahtarı PoE bütçesine göre boyutlandırılır; gece görüş ve arka aydınlatma koşulları sahada denenir." data-en="Camera type and lens angle follow the area covered and whether recognition or identification is needed. Storage is calculated from retention period and resolution. Switches are sized to the PoE budget, and night vision and backlight conditions are tested on site.">Kamera tipi ve lens açısı, izlenecek alanın genişliğine ve tanıma-teşhis ihtiyacına göre seçilir. Kayıt süresi ve çözünürlükten depolama kapasitesi hesaplanır. Ağ anahtarı PoE bütçesine göre boyutlandırılır; gece görüş ve arka aydınlatma koşulları sahada denenir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-otomasyon-gecis-kontrol" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-otomasyon.jpg" alt="Geçiş kontrol" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Geçiş kontrol" data-en="Access control">Geçiş kontrol</h4>
+              <p data-tr="Kapılardan kimin, nereye, ne zaman geçebileceğini yöneten sistem." data-en="The system governing who may pass which door and when.">Kapılardan kimin, nereye, ne zaman geçebileceğini yöneten sistem.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Kapı donanımı yön ve yangın senaryosuna göre seçilir; kaçış yolundaki kapılar alarm anında otomatik serbest kalacak şekilde bağlanır. Okuyucu tipi kart ya da biyometrik olarak belirlenir. Yetki grupları ve zaman profilleri tanımlanır, kapı açık kalma süreleri ayarlanır." data-en="Door hardware suits the direction and fire scenario; doors on escape routes release automatically on alarm. Reader type is chosen as card or biometric. Authorisation groups and time profiles are defined, and door-held-open times set.">Kapı donanımı yön ve yangın senaryosuna göre seçilir; kaçış yolundaki kapılar alarm anında otomatik serbest kalacak şekilde bağlanır. Okuyucu tipi kart ya da biyometrik olarak belirlenir. Yetki grupları ve zaman profilleri tanımlanır, kapı açık kalma süreleri ayarlanır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-otomasyon-yapi-otomasyon" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/yapi-otomasyon.jpg" alt="Yapı otomasyonu" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Yapı otomasyonu" data-en="Building automation">Yapı otomasyonu</h4>
+              <p data-tr="Isıtma, soğutma, havalandırma ve aydınlatmanın merkezden izlenip yönetilmesi." data-en="Central monitoring and control of heating, cooling, ventilation and lighting.">Isıtma, soğutma, havalandırma ve aydınlatmanın merkezden izlenip yönetilmesi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Saha cihazları ve sensörler listelenip nokta tablosu çıkarılır. Kontrol senaryoları zaman, sıcaklık, CO2 ve varlık bilgisine göre yazılır. Sistem izleme ekranında mahal bazlı gösterilir; alarm eşikleri tanımlanır ve arıza durumunda hangi cihazın hangi konuma geçeceği belirlenir." data-en="Field devices and sensors are listed into a points schedule. Control strategies are written around schedule, temperature, CO2 and occupancy. Graphics show the plant room by room, alarm thresholds are set, and fail-safe positions defined.">Saha cihazları ve sensörler listelenip nokta tablosu çıkarılır. Kontrol senaryoları zaman, sıcaklık, CO2 ve varlık bilgisine göre yazılır. Sistem izleme ekranında mahal bazlı gösterilir; alarm eşikleri tanımlanır ve arıza durumunda hangi cihazın hangi konuma geçeceği belirlenir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-otomasyon-kablolama" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-otomasyon.jpg" alt="Yapısal kablolama" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Yapısal kablolama" data-en="Structured cabling">Yapısal kablolama</h4>
+              <p data-tr="Veri ve ses iletişiminin bakır ve fiber altyapısı." data-en="The copper and fibre infrastructure carrying data and voice.">Veri ve ses iletişiminin bakır ve fiber altyapısı.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Kat dağıtım odaları, yatay kablo mesafesi 90 metreyi aşmayacak şekilde konumlandırılır. Omurga fiber, yatay dağıtım bakır seçilir. Kanal ve tava güzergâhı enerji kablosundan ayrı tutulur; tamamlanan her kanal test cihazıyla ölçülüp sertifika raporu verilir." data-en="Floor distribution rooms are placed so horizontal runs stay under 90 m. Backbone is fibre, horizontal distribution copper. Containment is kept clear of power cabling, and every link is tested and certified on completion.">Kat dağıtım odaları, yatay kablo mesafesi 90 metreyi aşmayacak şekilde konumlandırılır. Omurga fiber, yatay dağıtım bakır seçilir. Kanal ve tava güzergâhı enerji kablosundan ayrı tutulur; tamamlanan her kanal test cihazıyla ölçülüp sertifika raporu verilir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-otomasyon-seslendirme" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-otomasyon.jpg" alt="Seslendirme" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Seslendirme" data-en="Public address">Seslendirme</h4>
+              <p data-tr="Anons ve acil durum seslendirme sistemi." data-en="Public address and voice alarm system.">Anons ve acil durum seslendirme sistemi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Hoparlör yerleşimi mahal hacmine ve yankılanma süresine göre yapılır, ses basıncı arka plan gürültüsünün üzerinde tutulur. Acil durum seslendirmesinde konuşma anlaşılabilirliği ölçülür. Bölge ayrımı yangın senaryosuyla eşleştirilir; hat izleme ile kablo kopması panelde görünür." data-en="Speaker layout follows room volume and reverberation time, keeping sound pressure above background noise. Voice alarm systems are measured for speech intelligibility. Zoning matches the fire scenario, and line monitoring reports cable faults at the panel.">Hoparlör yerleşimi mahal hacmine ve yankılanma süresine göre yapılır, ses basıncı arka plan gürültüsünün üzerinde tutulur. Acil durum seslendirmesinde konuşma anlaşılabilirliği ölçülür. Bölge ayrımı yangın senaryosuyla eşleştirilir; hat izleme ile kablo kopması panelde görünür.</span>
+              </p>
+            </div>
+          </div>
       </div>
       <div class="disiplin-panel" id="d-insaat" role="tabpanel" hidden>
-        <div class="disiplin-gorsel">
-          <img src="assets/gorseller/hz-insaat.jpg" alt="İnşaat ve Taahhüt" loading="lazy">
+        <h3 class="disiplin-ad" data-tr="İnşaat ve Taahhüt" data-en="Construction &amp; Contracting">İnşaat ve Taahhüt</h3>
+        <div class="kalem-dugmeler">
+          <button class="kalem-dugme etkin" type="button" data-kalem="d-insaat-anahtar-teslim"
+                  data-tr="Anahtar teslim" data-en="Turnkey delivery">Anahtar teslim</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-insaat-kaba-yapi"
+                  data-tr="Kaba yapı" data-en="Structural works">Kaba yapı</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-insaat-ince-yapi"
+                  data-tr="İnce yapı" data-en="Finishing works">İnce yapı</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-insaat-tadilat"
+                  data-tr="Tadilat · renovasyon" data-en="Renovation">Tadilat · renovasyon</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-insaat-endustriyel"
+                  data-tr="Endüstriyel yapı" data-en="Industrial buildings">Endüstriyel yapı</button>
         </div>
-        <div class="disiplin-govde">
-          <h3 data-tr="İnşaat ve Taahhüt" data-en="Construction &amp; Contracting">İnşaat ve Taahhüt</h3>
-          <ul class="disiplin-liste">
-            <li>
-              <b data-tr="Anahtar teslim" data-en="Turnkey delivery">Anahtar teslim</b>
-              <span data-tr="İnşaat, mekanik ve elektrik işlerinin tamamının tek sözleşme ve tek şantiye şefliği altında yürütülmesi." data-en="Construction, mechanical and electrical scopes run under a single contract and one site management.">İnşaat, mekanik ve elektrik işlerinin tamamının tek sözleşme ve tek şantiye şefliği altında yürütülmesi.</span>
-            </li>
-            <li>
-              <b data-tr="Kaba yapı" data-en="Structural works">Kaba yapı</b>
-              <span data-tr="Bölme duvar örgüsü, lento ve hatıl imalatı; kapı-pencere boşluklarının doğrama ölçüsüne göre bırakılması." data-en="Partition blockwork, lintels and ring beams, with openings left to joinery dimensions.">Bölme duvar örgüsü, lento ve hatıl imalatı; kapı-pencere boşluklarının doğrama ölçüsüne göre bırakılması.</span>
-            </li>
-            <li>
-              <b data-tr="İnce yapı" data-en="Finishing works">İnce yapı</b>
-              <span data-tr="Alçı sıva ve saten, şap, seramik ve parke kaplama, doğrama ile boya işleri." data-en="Plaster and skim, screed, tiling and flooring, joinery and paint.">Alçı sıva ve saten, şap, seramik ve parke kaplama, doğrama ile boya işleri.</span>
-            </li>
-            <li>
-              <b data-tr="Tadilat · renovasyon" data-en="Renovation">Tadilat · renovasyon</b>
-              <span data-tr="Kullanımdaki yapıda etaplı çalışma; mevcut tesisatın tespiti, sökümü ve yenilenmesi." data-en="Phased works in occupied buildings: surveying, stripping out and renewing existing services.">Kullanımdaki yapıda etaplı çalışma; mevcut tesisatın tespiti, sökümü ve yenilenmesi.</span>
-            </li>
-            <li>
-              <b data-tr="Endüstriyel yapı" data-en="Industrial buildings">Endüstriyel yapı</b>
-              <span data-tr="Fabrika ve depo yapılarında saha betonu, ağır yük zeminleri ve makine temelleri." data-en="Site concrete, heavy-duty floors and machine foundations in factory and warehouse buildings.">Fabrika ve depo yapılarında saha betonu, ağır yük zeminleri ve makine temelleri.</span>
-            </li>
-          </ul>
-        </div>
+          <div class="kalem-detay etkin" id="d-insaat-anahtar-teslim">
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/anahtar-teslim.jpg" alt="Anahtar teslim" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Anahtar teslim" data-en="Turnkey delivery">Anahtar teslim</h4>
+              <p data-tr="İnşaat, mekanik ve elektrik işlerinin tek sözleşmeyle üstlenilmesi." data-en="Taking on construction, mechanical and electrical scopes under one contract.">İnşaat, mekanik ve elektrik işlerinin tek sözleşmeyle üstlenilmesi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="İş programı disiplinler arası bağımlılığa göre kurulur: sıva öncesi tesisat, şap öncesi yerden ısıtma gibi kilit noktalar işaretlenir. Tek şantiye şefliği koordinasyonu yürütür. Hakediş ve teslim dosyası tek elden hazırlanır; iş bitiminde as-built çizimler ve test raporları birlikte verilir." data-en="The programme is built around cross-discipline dependencies, flagging hold points such as first fix before plaster and underfloor heating before screed. One site management runs coordination, and valuations and the handover file come from a single source with as-built drawings and test reports.">İş programı disiplinler arası bağımlılığa göre kurulur: sıva öncesi tesisat, şap öncesi yerden ısıtma gibi kilit noktalar işaretlenir. Tek şantiye şefliği koordinasyonu yürütür. Hakediş ve teslim dosyası tek elden hazırlanır; iş bitiminde as-built çizimler ve test raporları birlikte verilir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-insaat-kaba-yapi" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/kaba-yapi.jpg" alt="Kaba yapı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Kaba yapı" data-en="Structural works">Kaba yapı</h4>
+              <p data-tr="Betonarme sonrası bölme duvar, lento ve hatıl imalatları." data-en="Partition walls, lintels and ring beams following the concrete frame.">Betonarme sonrası bölme duvar, lento ve hatıl imalatları.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Duvar güzergâhları aplike edilir, kapı ve pencere boşlukları doğrama ölçüsüne göre bırakılır. Lento ve hatıl açıklığa göre boyutlandırılır. Tesisat şaftları ve baca boşlukları bu aşamada oluşturulur; sonradan kırım gerektirmemesi için elektrik ve mekanik projeleriyle çakıştırma yapılır." data-en="Wall lines are set out and openings left to joinery dimensions. Lintels and ring beams are sized to the span. Service shafts and flues are formed at this stage, cross-checked against electrical and mechanical drawings to avoid later chasing.">Duvar güzergâhları aplike edilir, kapı ve pencere boşlukları doğrama ölçüsüne göre bırakılır. Lento ve hatıl açıklığa göre boyutlandırılır. Tesisat şaftları ve baca boşlukları bu aşamada oluşturulur; sonradan kırım gerektirmemesi için elektrik ve mekanik projeleriyle çakıştırma yapılır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-insaat-ince-yapi" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/ince-yapi.jpg" alt="İnce yapı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="İnce yapı" data-en="Finishing works">İnce yapı</h4>
+              <p data-tr="Sıva, şap, kaplama, doğrama ve boya işleri." data-en="Plastering, screed, finishes, joinery and paint.">Sıva, şap, kaplama, doğrama ve boya işleri.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Sıva öncesi elektrik ve sıhhi tesisat duvara alınır, buat ve kutu kotları sabitlenir. Alçı sıva ve saten sonrası şap dökülüp mastarla tesviye edilir. Islak hacimde su yalıtımı kaplamadan önce yapılır; kaplama, doğrama ve boya sırası kirletmeyi önleyecek şekilde planlanır." data-en="First-fix electrical and plumbing are chased in before plaster with box levels fixed. Plaster and skim are followed by screed, levelled by straightedge. Wet areas are waterproofed before tiling, and the finishing sequence is planned to avoid soiling completed work.">Sıva öncesi elektrik ve sıhhi tesisat duvara alınır, buat ve kutu kotları sabitlenir. Alçı sıva ve saten sonrası şap dökülüp mastarla tesviye edilir. Islak hacimde su yalıtımı kaplamadan önce yapılır; kaplama, doğrama ve boya sırası kirletmeyi önleyecek şekilde planlanır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-insaat-tadilat" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/tadilat.jpg" alt="Tadilat · renovasyon" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Tadilat · renovasyon" data-en="Renovation">Tadilat · renovasyon</h4>
+              <p data-tr="Kullanımdaki yapıda etaplı yenileme çalışması." data-en="Phased refurbishment in an occupied building.">Kullanımdaki yapıda etaplı yenileme çalışması.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Mevcut tesisat ve taşıyıcı sistem tespit edilir, kırılabilecek ve kırılamayacak duvarlar ayrılır. Çalışma etaplara bölünür, kullanımdaki bölüm tozdan ve gürültüden ayrılır. Elektrik ve su kesintileri saat planına bağlanır; sökülen malzemenin tahliyesi program içinde tutulur." data-en="Existing services and structure are surveyed, separating removable walls from load-bearing ones. Work is split into phases with occupied areas isolated from dust and noise. Power and water shutdowns are scheduled by the hour, and demolition waste removal stays within the programme.">Mevcut tesisat ve taşıyıcı sistem tespit edilir, kırılabilecek ve kırılamayacak duvarlar ayrılır. Çalışma etaplara bölünür, kullanımdaki bölüm tozdan ve gürültüden ayrılır. Elektrik ve su kesintileri saat planına bağlanır; sökülen malzemenin tahliyesi program içinde tutulur.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-insaat-endustriyel" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/endustriyel.jpg" alt="Endüstriyel yapı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Endüstriyel yapı" data-en="Industrial buildings">Endüstriyel yapı</h4>
+              <p data-tr="Fabrika ve depo yapılarında zemin, saha ve altyapı imalatları." data-en="Floors, external works and infrastructure in factory and warehouse buildings.">Fabrika ve depo yapılarında zemin, saha ve altyapı imalatları.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Zemin, forklift ve raf yüklerine göre boyutlandırılır; donatı ve derz aralıkları buna göre belirlenir. Yüzey düzlüğü ölçülerek raf üreticisinin toleransıyla karşılaştırılır. Makine temelleri titreşim yalıtımıyla ayrılır; saha betonu ve drenaj eğimleri yağış verisine göre çözülür." data-en="Floors are sized for forklift and racking loads, setting reinforcement and joint spacing. Surface flatness is measured against the racking supplier's tolerance. Machine foundations are isolated for vibration, and external concrete and drainage falls follow rainfall data.">Zemin, forklift ve raf yüklerine göre boyutlandırılır; donatı ve derz aralıkları buna göre belirlenir. Yüzey düzlüğü ölçülerek raf üreticisinin toleransıyla karşılaştırılır. Makine temelleri titreşim yalıtımıyla ayrılır; saha betonu ve drenaj eğimleri yağış verisine göre çözülür.</span>
+              </p>
+            </div>
+          </div>
       </div>
       <div class="disiplin-panel" id="d-enh" role="tabpanel" hidden>
-        <div class="disiplin-gorsel">
-          <img src="assets/gorseller/hz-enh.jpg" alt="Enerji Nakil Hattı ve Trafo Merkezi" loading="lazy">
+        <h3 class="disiplin-ad" data-tr="Enerji Nakil Hattı ve Trafo Merkezi" data-en="Power Transmission Lines &amp; Substations">Enerji Nakil Hattı ve Trafo Merkezi</h3>
+        <div class="kalem-dugmeler">
+          <button class="kalem-dugme etkin" type="button" data-kalem="d-enh-enh-direk"
+                  data-tr="ENH direk montajı" data-en="Pole erection">ENH direk montajı</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-enh-iletken-cekimi"
+                  data-tr="İletken çekimi" data-en="Conductor stringing">İletken çekimi</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-enh-kosk"
+                  data-tr="Trafo merkezi · köşk" data-en="Substation &amp; kiosk">Trafo merkezi · köşk</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-enh-og-hucre"
+                  data-tr="OG hücre · koruma rölesi" data-en="MV switchgear &amp; protection relay">OG hücre · koruma rölesi</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-enh-kabul"
+                  data-tr="Enerji müsaadesi ve kabul" data-en="Utility approval &amp; acceptance">Enerji müsaadesi ve kabul</button>
         </div>
-        <div class="disiplin-govde">
-          <h3 data-tr="Enerji Nakil Hattı ve Trafo Merkezi" data-en="Power Transmission Lines &amp; Substations">Enerji Nakil Hattı ve Trafo Merkezi</h3>
-          <ul class="disiplin-liste">
-            <li>
-              <b data-tr="ENH direk montajı" data-en="Pole erection">ENH direk montajı</b>
-              <span data-tr="Güzergâh aplikasyonu, temel imalatı ve direk dikimi; zemin durumuna göre temel tipi seçimi." data-en="Route setting out, foundation construction and pole erection, with foundation type chosen for the ground conditions.">Güzergâh aplikasyonu, temel imalatı ve direk dikimi; zemin durumuna göre temel tipi seçimi.</span>
-            </li>
-            <li>
-              <b data-tr="İletken çekimi" data-en="Conductor stringing">İletken çekimi</b>
-              <span data-tr="Salgı hesabına göre iletken çekimi, izolatör ve armatür montajı, gerdirme ve emniyet mesafesi kontrolü." data-en="Conductor stringing to sag calculation, insulator and fitting installation, tensioning and clearance checks.">Salgı hesabına göre iletken çekimi, izolatör ve armatür montajı, gerdirme ve emniyet mesafesi kontrolü.</span>
-            </li>
-            <li>
-              <b data-tr="Trafo merkezi · köşk" data-en="Substation &amp; kiosk">Trafo merkezi · köşk</b>
-              <span data-tr="Beton köşk veya bina tipi merkezde güç trafosu, orta gerilim hücre grubu ve alçak gerilim panosunun yerleşimi." data-en="Power transformer, MV switchgear and LV panel arranged in a concrete kiosk or indoor substation.">Beton köşk veya bina tipi merkezde güç trafosu, orta gerilim hücre grubu ve alçak gerilim panosunun yerleşimi.</span>
-            </li>
-            <li>
-              <b data-tr="OG hücre · koruma rölesi" data-en="MV switchgear &amp; protection relay">OG hücre · koruma rölesi</b>
-              <span data-tr="Kesici, ayırıcı, akım ve gerilim trafoları; röle ayarlarının seçicilik hesabına göre girilmesi ve test edilmesi." data-en="Breakers, disconnectors, current and voltage transformers; relay settings entered and tested per the discrimination study.">Kesici, ayırıcı, akım ve gerilim trafoları; röle ayarlarının seçicilik hesabına göre girilmesi ve test edilmesi.</span>
-            </li>
-            <li>
-              <b data-tr="Enerji müsaadesi ve kabul" data-en="Utility approval &amp; acceptance">Enerji müsaadesi ve kabul</b>
-              <span data-tr="Proje onayı, dağıtım şirketi kabul süreci, sayaç noktası ve geçici kabul dosyasının hazırlanması." data-en="Design approval, utility acceptance process, metering point and preparation of the provisional acceptance file.">Proje onayı, dağıtım şirketi kabul süreci, sayaç noktası ve geçici kabul dosyasının hazırlanması.</span>
-            </li>
-          </ul>
-        </div>
+          <div class="kalem-detay etkin" id="d-enh-enh-direk">
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-enh.jpg" alt="ENH direk montajı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="ENH direk montajı" data-en="Pole erection">ENH direk montajı</h4>
+              <p data-tr="Enerji nakil hattı direklerinin temeli ve dikimi." data-en="Foundations and erection of transmission line poles.">Enerji nakil hattı direklerinin temeli ve dikimi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Güzergâh araziye aplike edilir, direk yerleri koordinatla işaretlenir. Zemin durumuna göre temel tipi ve boyutu belirlenir, beton dökülüp priz süresi beklenir. Direk montajı vinçle yapılır, gönye ve düşeylik kontrol edilir; topraklama elektrotu direk temeline bağlanır." data-en="The route is set out on site and pole positions marked by coordinates. Foundation type and size follow ground conditions, with concrete poured and cured. Poles are craned into place, checked for alignment and plumb, and earth electrodes bonded to the foundation.">Güzergâh araziye aplike edilir, direk yerleri koordinatla işaretlenir. Zemin durumuna göre temel tipi ve boyutu belirlenir, beton dökülüp priz süresi beklenir. Direk montajı vinçle yapılır, gönye ve düşeylik kontrol edilir; topraklama elektrotu direk temeline bağlanır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-enh-iletken-cekimi" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/hz-enh.jpg" alt="İletken çekimi" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="İletken çekimi" data-en="Conductor stringing">İletken çekimi</h4>
+              <p data-tr="Direkler arasına iletkenin çekilmesi ve gerdirilmesi." data-en="Pulling and tensioning conductors between poles.">Direkler arasına iletkenin çekilmesi ve gerdirilmesi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Salgı hesabı sıcaklık ve açıklığa göre yapılır, çekim tablosu çıkarılır. İzolatör ve armatürler montajlanır, iletken makaralar üzerinden çekilerek zedelenmesi önlenir. Gerdirme sonrası salgı ölçülür; yol, bina ve diğer hatlara emniyet mesafeleri kontrol edilerek kayda geçirilir." data-en="Sag is calculated for temperature and span, producing a stringing chart. Insulators and fittings are installed and conductors pulled over rollers to prevent damage. Sag is measured after tensioning and clearances to roads, buildings and other lines checked and recorded.">Salgı hesabı sıcaklık ve açıklığa göre yapılır, çekim tablosu çıkarılır. İzolatör ve armatürler montajlanır, iletken makaralar üzerinden çekilerek zedelenmesi önlenir. Gerdirme sonrası salgı ölçülür; yol, bina ve diğer hatlara emniyet mesafeleri kontrol edilerek kayda geçirilir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-enh-kosk" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/kosk.jpg" alt="Trafo merkezi · köşk" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Trafo merkezi · köşk" data-en="Substation &amp; kiosk">Trafo merkezi · köşk</h4>
+              <p data-tr="Beton köşk veya bina tipi merkezde trafo ve hücre yerleşimi." data-en="Transformer and switchgear layout in a concrete kiosk or indoor substation.">Beton köşk veya bina tipi merkezde trafo ve hücre yerleşimi.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Köşk yeri erişim ve kablo güzergâhına göre seçilir. Trafo, orta gerilim hücre grubu ve alçak gerilim panosu manevra mesafeleri bırakılarak yerleştirilir. Havalandırma trafo kaybına göre boyutlandırılır, yağlı trafoda yağ toplama havuzu yapılır ve topraklama şebekesi köşk altına serilir." data-en="The kiosk position follows access and cable routes. Transformer, MV switchgear and LV panel are arranged with operating clearances. Ventilation is sized from transformer losses, oil-filled units get a containment pit, and an earth grid is laid beneath.">Köşk yeri erişim ve kablo güzergâhına göre seçilir. Trafo, orta gerilim hücre grubu ve alçak gerilim panosu manevra mesafeleri bırakılarak yerleştirilir. Havalandırma trafo kaybına göre boyutlandırılır, yağlı trafoda yağ toplama havuzu yapılır ve topraklama şebekesi köşk altına serilir.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-enh-og-hucre" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/og-hucre.jpg" alt="OG hücre · koruma rölesi" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="OG hücre · koruma rölesi" data-en="MV switchgear &amp; protection relay">OG hücre · koruma rölesi</h4>
+              <p data-tr="Orta gerilim kesici, ayırıcı ve koruma rölesi düzeni." data-en="Medium-voltage breakers, disconnectors and protection relays.">Orta gerilim kesici, ayırıcı ve koruma rölesi düzeni.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Hücre tipi giriş, çıkış ve trafo koruma fonksiyonuna göre seçilir. Akım ve gerilim trafolarının oranı ile doğruluk sınıfı koruma ihtiyacına göre belirlenir. Röle ayarları seçicilik hesabıyla girilir; sekonder enjeksiyon testiyle koruma fonksiyonlarının doğru zamanda açtırdığı doğrulanır." data-en="Panel types follow incomer, feeder and transformer protection duties. CT and VT ratios and accuracy classes suit the protection scheme. Relay settings come from the discrimination study and are proven by secondary injection testing.">Hücre tipi giriş, çıkış ve trafo koruma fonksiyonuna göre seçilir. Akım ve gerilim trafolarının oranı ile doğruluk sınıfı koruma ihtiyacına göre belirlenir. Röle ayarları seçicilik hesabıyla girilir; sekonder enjeksiyon testiyle koruma fonksiyonlarının doğru zamanda açtırdığı doğrulanır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-enh-kabul" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/kabul.jpg" alt="Enerji müsaadesi ve kabul" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Enerji müsaadesi ve kabul" data-en="Utility approval &amp; acceptance">Enerji müsaadesi ve kabul</h4>
+              <p data-tr="Dağıtım şirketi onayı, sayaç noktası ve kabul süreci." data-en="Utility approval, metering point and the acceptance process.">Dağıtım şirketi onayı, sayaç noktası ve kabul süreci.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Proje dağıtım şirketine sunulur, onay sonrası imalata geçilir. Sayaç noktası ve ölçü trafoları şirket şartnamesine göre kurulur. Saha kabulünde topraklama direnci, röle ayarları ve etiketleme kontrol edilir; geçici kabul dosyası as-built çizim ve test raporlarıyla teslim edilir." data-en="Drawings are submitted to the utility and construction follows approval. The metering point and instrument transformers meet the utility specification. Site acceptance checks earth resistance, relay settings and labelling, and the provisional acceptance file is handed over with as-builts and test reports.">Proje dağıtım şirketine sunulur, onay sonrası imalata geçilir. Sayaç noktası ve ölçü trafoları şirket şartnamesine göre kurulur. Saha kabulünde topraklama direnci, röle ayarları ve etiketleme kontrol edilir; geçici kabul dosyası as-built çizim ve test raporlarıyla teslim edilir.</span>
+              </p>
+            </div>
+          </div>
       </div>
       <div class="disiplin-panel" id="d-ges" role="tabpanel" hidden>
-        <div class="disiplin-gorsel">
-          <img src="assets/gorseller/hz-ges.jpg" alt="Güneş Enerji Santrali (GES)" loading="lazy">
+        <h3 class="disiplin-ad" data-tr="Güneş Enerji Santrali (GES)" data-en="Solar Power Plants (PV)">Güneş Enerji Santrali (GES)</h3>
+        <div class="kalem-dugmeler">
+          <button class="kalem-dugme etkin" type="button" data-kalem="d-ges-arazi-ges"
+                  data-tr="Arazi tipi GES" data-en="Ground-mounted PV">Arazi tipi GES</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-ges-cati-ges"
+                  data-tr="Çatı GES" data-en="Rooftop PV">Çatı GES</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-ges-inverter"
+                  data-tr="İnverter · trafo" data-en="Inverter &amp; transformer">İnverter · trafo</button>
+          <button class="kalem-dugme" type="button" data-kalem="d-ges-sebeke"
+                  data-tr="Şebeke bağlantısı" data-en="Grid connection">Şebeke bağlantısı</button>
         </div>
-        <div class="disiplin-govde">
-          <h3 data-tr="Güneş Enerji Santrali (GES)" data-en="Solar Power Plants (PV)">Güneş Enerji Santrali (GES)</h3>
-          <ul class="disiplin-liste">
-            <li>
-              <b data-tr="Arazi tipi GES" data-en="Ground-mounted PV">Arazi tipi GES</b>
-              <span data-tr="Saha etüdü ve fizibilite, konstrüksiyon montajı, panel ve DC string tesisi, saha içi kablolama." data-en="Site survey and feasibility, mounting structures, panel and DC string installation, on-site cabling.">Saha etüdü ve fizibilite, konstrüksiyon montajı, panel ve DC string tesisi, saha içi kablolama.</span>
-            </li>
-            <li>
-              <b data-tr="Çatı GES" data-en="Rooftop PV">Çatı GES</b>
-              <span data-tr="Çatı yükü kontrolü, taşıyıcı ve sızdırmazlık detayları, öz tüketim hesabı ve yangın güvenliği." data-en="Roof load check, mounting and waterproofing details, self-consumption analysis and fire safety.">Çatı yükü kontrolü, taşıyıcı ve sızdırmazlık detayları, öz tüketim hesabı ve yangın güvenliği.</span>
-            </li>
-            <li>
-              <b data-tr="İnverter · trafo" data-en="Inverter &amp; transformer">İnverter · trafo</b>
-              <span data-tr="String veya santral tipi inverter seçimi, trafo istasyonu kurulumu ve DC/AC kablolama." data-en="String or central inverter selection, transformer station installation and DC/AC cabling.">String veya santral tipi inverter seçimi, trafo istasyonu kurulumu ve DC/AC kablolama.</span>
-            </li>
-            <li>
-              <b data-tr="Şebeke bağlantısı" data-en="Grid connection">Şebeke bağlantısı</b>
-              <span data-tr="Orta gerilim hücresi, koruma koordinasyonu, sayaç noktası ve devreye alma ölçümleri." data-en="MV switchgear, protection coordination, metering point and commissioning measurements.">Orta gerilim hücresi, koruma koordinasyonu, sayaç noktası ve devreye alma ölçümleri.</span>
-            </li>
-          </ul>
-        </div>
+          <div class="kalem-detay etkin" id="d-ges-arazi-ges">
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/arazi-ges.jpg" alt="Arazi tipi GES" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Arazi tipi GES" data-en="Ground-mounted PV">Arazi tipi GES</h4>
+              <p data-tr="Arazi üzerine kurulan büyük ölçekli güneş enerji santrali." data-en="Utility-scale solar plants built on open land.">Arazi üzerine kurulan büyük ölçekli güneş enerji santrali.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Saha etüdünde eğim, gölgeleme ve zemin taşıma gücü incelenir. Dizi aralığı kış gündönümü gölge boyuna göre belirlenir. Konstrüksiyon çakma kazık ya da beton temelle kurulur, panel montajından sonra string akımları ve izolasyon direnci ölçülerek kayda geçer." data-en="Site survey covers slope, shading and ground bearing capacity. Row spacing follows winter solstice shadow length. Structures use driven piles or concrete footings; after panel installation, string currents and insulation resistance are measured and recorded.">Saha etüdünde eğim, gölgeleme ve zemin taşıma gücü incelenir. Dizi aralığı kış gündönümü gölge boyuna göre belirlenir. Konstrüksiyon çakma kazık ya da beton temelle kurulur, panel montajından sonra string akımları ve izolasyon direnci ölçülerek kayda geçer.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-ges-cati-ges" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/cati-ges.jpg" alt="Çatı GES" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Çatı GES" data-en="Rooftop PV">Çatı GES</h4>
+              <p data-tr="Fabrika, depo ve ticari yapı çatılarında kurulan sistemler." data-en="Systems installed on factory, warehouse and commercial roofs.">Fabrika, depo ve ticari yapı çatılarında kurulan sistemler.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Önce çatının panel ve kar yükünü taşıyıp taşımadığı kontrol edilir. Taşıyıcı sistem çatı tipine göre seçilir; membran çatıda balastlı, trapez sacda kelepçeli çözüm kullanılır. Delme gereken yerlerde sızdırmazlık detayı uygulanır, DC hatlar yangın güvenliği için kısa ve erişilebilir tutulur." data-en="The roof is first checked for panel and snow loads. Mounting suits the roof type: ballasted on membranes, clamped on trapezoidal sheet. Waterproofing details are applied wherever penetration is needed, and DC runs kept short and accessible for fire safety.">Önce çatının panel ve kar yükünü taşıyıp taşımadığı kontrol edilir. Taşıyıcı sistem çatı tipine göre seçilir; membran çatıda balastlı, trapez sacda kelepçeli çözüm kullanılır. Delme gereken yerlerde sızdırmazlık detayı uygulanır, DC hatlar yangın güvenliği için kısa ve erişilebilir tutulur.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-ges-inverter" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/inverter.jpg" alt="İnverter · trafo" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="İnverter · trafo" data-en="Inverter &amp; transformer">İnverter · trafo</h4>
+              <p data-tr="Doğru akımı şebeke uyumlu alternatif akıma çeviren ekipman." data-en="Equipment converting DC into grid-compliant AC.">Doğru akımı şebeke uyumlu alternatif akıma çeviren ekipman.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="String ya da santral tipi inverter, saha büyüklüğü ve gölgelenme durumuna göre seçilir. DC/AC oranı üretim profiline göre belirlenir. İnverter ve trafo istasyonu kablo mesafesini kısaltacak şekilde konumlandırılır; soğutma ve servis erişimi bırakılarak montaj yapılır." data-en="String or central inverters are chosen by plant size and shading. The DC/AC ratio follows the generation profile. Inverter and transformer stations are positioned to shorten cable runs, with cooling and service access preserved.">String ya da santral tipi inverter, saha büyüklüğü ve gölgelenme durumuna göre seçilir. DC/AC oranı üretim profiline göre belirlenir. İnverter ve trafo istasyonu kablo mesafesini kısaltacak şekilde konumlandırılır; soğutma ve servis erişimi bırakılarak montaj yapılır.</span>
+              </p>
+            </div>
+          </div>
+          <div class="kalem-detay" id="d-ges-sebeke" hidden>
+            <div class="kalem-gorsel"><img src="assets/gorseller/kalem/sebeke.jpg" alt="Şebeke bağlantısı" loading="lazy"></div>
+            <div class="kalem-metin">
+              <h4 data-tr="Şebeke bağlantısı" data-en="Grid connection">Şebeke bağlantısı</h4>
+              <p data-tr="Santralin dağıtım şebekesine bağlandığı nokta ve koruma düzeni." data-en="The point at which the plant connects to the grid, with its protection scheme.">Santralin dağıtım şebekesine bağlandığı nokta ve koruma düzeni.</p>
+              <p class="kalem-uygulama">
+                <b data-tr="Nasıl uyguluyoruz" data-en="How we deliver it">Nasıl uyguluyoruz</b>
+                <span data-tr="Bağlantı noktası ve gerilim seviyesi dağıtım şirketiyle belirlenir. Orta gerilim hücresi, koruma rölesi ve sayaç şirket şartnamesine göre kurulur. Ada modu koruması, gerilim ve frekans sınırları ayarlanır; devreye almada üretim ölçülüp kabul raporuna işlenir." data-en="Connection point and voltage level are agreed with the utility. MV switchgear, protection relay and metering follow the utility specification. Anti-islanding protection and voltage/frequency limits are set, and generation is measured at commissioning for the acceptance report.">Bağlantı noktası ve gerilim seviyesi dağıtım şirketiyle belirlenir. Orta gerilim hücresi, koruma rölesi ve sayaç şirket şartnamesine göre kurulur. Ada modu koruması, gerilim ve frekans sınırları ayarlanır; devreye almada üretim ölçülüp kabul raporuna işlenir.</span>
+              </p>
+            </div>
+          </div>
       </div>
     </div>
   </div>

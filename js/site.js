@@ -312,15 +312,35 @@
     });
   }
 
-  // ======================= DISIPLIN SEKMELERI =======================
-  // Hizmet kalemlerinin detayi: bir anda tek panel acik durur. Paneller
-  // `hidden` ozniteligiyle gizlenir; boylece kapali panelin icerigi
-  // Google'in gordugu HTML'de kalir ama ekran okuyucuya sunulmaz.
+  // ======================= DISIPLIN VE KALEM SECIMI =======================
+  // Iki kademe var: ustte disiplin sekmesi, altta o disiplinin kalemleri.
+  // Panel degisince o panelin ilk kalemi acilir; yoksa kullanici onceki
+  // panelde sectigi kalemin izini bulamiyor.
 
   var disiplinSekmeleri = document.querySelectorAll('.disiplin-sekme');
 
+  function kalemAc(panel, dugme) {
+    var hedef = dugme.getAttribute('data-kalem');
+
+    panel.querySelectorAll('.kalem-dugme').forEach(function (d) {
+      d.classList.toggle('etkin', d === dugme);
+    });
+
+    panel.querySelectorAll('.kalem-detay').forEach(function (k) {
+      var acik = k.id === hedef;
+      k.hidden = !acik;
+      k.classList.toggle('etkin', acik);
+    });
+  }
+
   if (disiplinSekmeleri.length) {
     var disiplinPanelleri = document.querySelectorAll('.disiplin-panel');
+
+    disiplinPanelleri.forEach(function (panel) {
+      panel.querySelectorAll('.kalem-dugme').forEach(function (dugme) {
+        dugme.addEventListener('click', function () { kalemAc(panel, dugme); });
+      });
+    });
 
     disiplinSekmeleri.forEach(function (sekme) {
       sekme.addEventListener('click', function () {
@@ -336,6 +356,10 @@
           var acik = p.id === hedef;
           p.hidden = !acik;
           p.classList.toggle('etkin', acik);
+          if (acik) {
+            var ilk = p.querySelector('.kalem-dugme');
+            if (ilk) kalemAc(p, ilk);
+          }
         });
       });
     });
