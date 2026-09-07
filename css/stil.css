@@ -322,6 +322,44 @@ p { color: var(--metin-yumusak); }
 }
 .hizmet:hover { transform: translateY(-6px); border-color: rgba(226, 96, 28, .35); box-shadow: var(--kart-golge); }
 .hizmet:hover::after { transform: scaleX(1); }
+/* --- Hizmet kartinda fotograf ---
+   Kart dolgusu 38/32 px; gorsel kartin tepesine tam oturmasi icin negatif
+   kenar bosluguyla disari tasirilir. Ust kose yaricapi kartinkiyle ayni
+   olmali, yoksa gorselin kosesi kartin disina tasar. */
+.hizmet-gorsel {
+  position: relative; margin: -38px -32px 24px;
+  aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: 9px 9px 0 0; background: var(--yuzey);
+}
+.hizmet-gorsel img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform .6s cubic-bezier(.22, .61, .36, 1);
+}
+.hizmet:hover .hizmet-gorsel img { transform: scale(1.05); }
+.hizmet-gorsel::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 60%, rgba(15, 24, 34, .35));
+}
+/* Fotograf gelince ikon gorselin uzerine binen bir rozete donusur */
+.hizmet-gorsel + .hizmet-ikon {
+  margin-top: -50px; margin-bottom: 18px; position: relative; z-index: 2;
+  background: var(--kart-zemin); border-color: rgba(226, 96, 28, .4);
+  box-shadow: 0 6px 18px rgba(15, 24, 34, .18);
+}
+.hizmet-temsili {
+  position: absolute; right: 8px; bottom: 8px; z-index: 2;
+  font-size: .6rem; font-weight: 600; letter-spacing: .05em;
+  padding: 4px 8px; border-radius: 6px;
+  background: rgba(15, 24, 34, .72); color: #fff;
+}
+/* Genis kart (GES) yatay dizilir; gorsel solda dar bir sutun olur */
+.hizmet-genis .hizmet-gorsel {
+  margin: 0; width: 190px; aspect-ratio: 4 / 3; border-radius: 9px;
+}
+@media (max-width: 720px) {
+  .hizmet-genis .hizmet-gorsel { width: 100%; aspect-ratio: 16 / 9; }
+}
+
 .hizmet-ikon {
   width: 54px; height: 54px; margin-bottom: 24px;
   display: grid; place-items: center;
@@ -579,6 +617,7 @@ p { color: var(--metin-yumusak); }
   .hizmet-izgara, .proje-izgara, .surec, .sektor-izgara, .alt-ic { grid-template-columns: 1fr; }
   .form-satir { grid-template-columns: 1fr; gap: 0; }
   .hizmet { padding: 32px 26px; }
+  .hizmet-gorsel { margin: -32px -26px 22px; }
   .cagri .kenar { flex-direction: column; align-items: flex-start; }
   .alt-serit { flex-direction: column; align-items: flex-start; gap: 10px; }
   .hakkinda-gorsel::after { display: none; }
