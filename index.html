@@ -419,6 +419,271 @@
       </article>
 
     </div>
+
+    <div class="disiplin belir">
+      <div class="disiplin-ust">
+        <h3 class="disiplin-baslik" data-tr="Kalem kalem kapsam" data-en="Scope, item by item">Kalem kalem kapsam</h3>
+        <p data-tr="Her disiplinin altında hangi imalatın yapıldığı ve nasıl boyutlandırıldığı."
+           data-en="What each discipline covers and how every item is sized.">
+          Her disiplinin altında hangi imalatın yapıldığı ve nasıl boyutlandırıldığı.</p>
+      </div>
+      <div class="disiplin-sekmeler" role="tablist">
+        <button class="disiplin-sekme etkin" type="button" role="tab" aria-controls="d-elektrik"
+                aria-selected="true" data-panel="d-elektrik" data-tr="Elektrik" data-en="Electrical">Elektrik</button>
+        <button class="disiplin-sekme" type="button" role="tab" aria-controls="d-mekanik"
+                aria-selected="false" data-panel="d-mekanik" data-tr="Mekanik" data-en="Mechanical">Mekanik</button>
+        <button class="disiplin-sekme" type="button" role="tab" aria-controls="d-iklim"
+                aria-selected="false" data-panel="d-iklim" data-tr="İklimlendirme" data-en="HVAC">İklimlendirme</button>
+        <button class="disiplin-sekme" type="button" role="tab" aria-controls="d-yangin"
+                aria-selected="false" data-panel="d-yangin" data-tr="Yangın" data-en="Fire">Yangın</button>
+        <button class="disiplin-sekme" type="button" role="tab" aria-controls="d-otomasyon"
+                aria-selected="false" data-panel="d-otomasyon" data-tr="Zayıf Akım" data-en="Low Current">Zayıf Akım</button>
+        <button class="disiplin-sekme" type="button" role="tab" aria-controls="d-insaat"
+                aria-selected="false" data-panel="d-insaat" data-tr="İnşaat" data-en="Construction">İnşaat</button>
+        <button class="disiplin-sekme" type="button" role="tab" aria-controls="d-enh"
+                aria-selected="false" data-panel="d-enh" data-tr="ENH · Trafo" data-en="Lines &amp; Substations">ENH · Trafo</button>
+        <button class="disiplin-sekme" type="button" role="tab" aria-controls="d-ges"
+                aria-selected="false" data-panel="d-ges" data-tr="GES" data-en="Solar">GES</button>
+      </div>
+      <div class="disiplin-panel etkin" id="d-elektrik" role="tabpanel">
+        <div class="disiplin-gorsel">
+          <img src="assets/gorseller/hz-elektrik.jpg" alt="Elektrik Tesisatı ve Enerji" loading="lazy">
+        </div>
+        <div class="disiplin-govde">
+          <h3 data-tr="Elektrik Tesisatı ve Enerji" data-en="Electrical Systems &amp; Power">Elektrik Tesisatı ve Enerji</h3>
+          <ul class="disiplin-liste">
+            <li>
+              <b data-tr="OG / AG dağıtım" data-en="MV / LV distribution">OG / AG dağıtım</b>
+              <span data-tr="Trafo çıkışından son tüketiciye kadar kablo kesiti, gerilim düşümü ve kısa devre akımı hesaplanarak boyutlandırılan dağıtım şebekesi." data-en="Distribution network sized from the transformer to the final load through cable cross-section, voltage drop and short-circuit current calculations.">Trafo çıkışından son tüketiciye kadar kablo kesiti, gerilim düşümü ve kısa devre akımı hesaplanarak boyutlandırılan dağıtım şebekesi.</span>
+            </li>
+            <li>
+              <b data-tr="Trafo merkezi" data-en="Substation">Trafo merkezi</b>
+              <span data-tr="Kuru tip veya yağlı güç trafosu, orta gerilim hücre grubu ve kompanzasyon panosunun tek hacimde kurulumu." data-en="Dry-type or oil-immersed power transformer, medium-voltage switchgear and power factor panel installed in a single enclosure.">Kuru tip veya yağlı güç trafosu, orta gerilim hücre grubu ve kompanzasyon panosunun tek hacimde kurulumu.</span>
+            </li>
+            <li>
+              <b data-tr="Pano imalatı" data-en="Switchgear fabrication">Pano imalatı</b>
+              <span data-tr="Ana dağıtım, kompanzasyon ve MCC panolarının imalatı; bara kesiti ve kesici seçimi kısa devre akımına göre yapılır." data-en="Fabrication of main distribution, capacitor and MCC panels; busbar sizing and breaker selection follow the short-circuit rating.">Ana dağıtım, kompanzasyon ve MCC panolarının imalatı; bara kesiti ve kesici seçimi kısa devre akımına göre yapılır.</span>
+            </li>
+            <li>
+              <b data-tr="Kompanzasyon" data-en="Power factor correction">Kompanzasyon</b>
+              <span data-tr="Reaktif güç ölçümü, kondansatör kademelendirmesi ve harmonik seviyesine göre filtreli ya da filtresiz sistem seçimi." data-en="Reactive power measurement, capacitor staging, and filtered or unfiltered selection according to the measured harmonic level.">Reaktif güç ölçümü, kondansatör kademelendirmesi ve harmonik seviyesine göre filtreli ya da filtresiz sistem seçimi.</span>
+            </li>
+            <li>
+              <b data-tr="Topraklama · paratoner" data-en="Earthing &amp; lightning protection">Topraklama · paratoner</b>
+              <span data-tr="Toprak özdirenç ölçümü, temel topraklaması, eş potansiyel bara ve yıldırımdan korunma tesisatı; teslimde direnç değerleri ölçülür." data-en="Soil resistivity measurement, foundation earthing, equipotential bonding and lightning protection; resistance values are measured at handover.">Toprak özdirenç ölçümü, temel topraklaması, eş potansiyel bara ve yıldırımdan korunma tesisatı; teslimde direnç değerleri ölçülür.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="disiplin-panel" id="d-mekanik" role="tabpanel" hidden>
+        <div class="disiplin-gorsel">
+          <img src="assets/gorseller/hz-mekanik.jpg" alt="Mekanik Tesisat" loading="lazy">
+        </div>
+        <div class="disiplin-govde">
+          <h3 data-tr="Mekanik Tesisat" data-en="Mechanical Installations">Mekanik Tesisat</h3>
+          <ul class="disiplin-liste">
+            <li>
+              <b data-tr="Sıhhi tesisat" data-en="Plumbing">Sıhhi tesisat</b>
+              <span data-tr="Temiz su, pis su ve yağmur suyu hatlarının debi, çap ve eğim hesabıyla projelendirilip basınç testiyle teslim edilmesi." data-en="Potable water, waste and rainwater lines designed by flow, diameter and gradient, handed over after pressure testing.">Temiz su, pis su ve yağmur suyu hatlarının debi, çap ve eğim hesabıyla projelendirilip basınç testiyle teslim edilmesi.</span>
+            </li>
+            <li>
+              <b data-tr="Isıtma sistemleri" data-en="Heating systems">Isıtma sistemleri</b>
+              <span data-tr="Isı kaybı hesabına göre kazan dairesi, kollektör grubu, radyatör veya yerden ısıtma devrelerinin kurulumu." data-en="Boiler room, manifold group and radiator or underfloor circuits installed according to the heat loss calculation.">Isı kaybı hesabına göre kazan dairesi, kollektör grubu, radyatör veya yerden ısıtma devrelerinin kurulumu.</span>
+            </li>
+            <li>
+              <b data-tr="Doğalgaz hattı" data-en="Natural gas lines">Doğalgaz hattı</b>
+              <span data-tr="Gaz teslim noktasından cihaza kadar hat imalatı, sertifikalı kaynak, sızdırmazlık testi ve gaz açma işlemleri." data-en="Pipework from the delivery point to the appliance, certified welding, tightness testing and gas commissioning.">Gaz teslim noktasından cihaza kadar hat imalatı, sertifikalı kaynak, sızdırmazlık testi ve gaz açma işlemleri.</span>
+            </li>
+            <li>
+              <b data-tr="Basınçlı hava" data-en="Compressed air">Basınçlı hava</b>
+              <span data-tr="Kompresör ve kurutucu seçimi; hat boyunca basınç kaybı hesaplanmış halka veya dallı dağıtım şebekesi." data-en="Compressor and dryer selection with a ring or branched network sized against calculated pressure loss.">Kompresör ve kurutucu seçimi; hat boyunca basınç kaybı hesaplanmış halka veya dallı dağıtım şebekesi.</span>
+            </li>
+            <li>
+              <b data-tr="Pompa · hidrofor" data-en="Pumps &amp; boosters">Pompa · hidrofor</b>
+              <span data-tr="Debi–basma yüksekliği eğrisine göre pompa seçimi ve frekans konvertörlü hidrofor gruplarının devreye alınması." data-en="Pump selection from the flow–head curve and commissioning of variable-frequency booster sets.">Debi–basma yüksekliği eğrisine göre pompa seçimi ve frekans konvertörlü hidrofor gruplarının devreye alınması.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="disiplin-panel" id="d-iklim" role="tabpanel" hidden>
+        <div class="disiplin-gorsel">
+          <img src="assets/gorseller/hz-iklim.jpg" alt="İklimlendirme ve Havalandırma" loading="lazy">
+        </div>
+        <div class="disiplin-govde">
+          <h3 data-tr="İklimlendirme ve Havalandırma" data-en="HVAC &amp; Ventilation">İklimlendirme ve Havalandırma</h3>
+          <ul class="disiplin-liste">
+            <li>
+              <b data-tr="VRF · split sistem" data-en="VRF &amp; split systems">VRF · split sistem</b>
+              <span data-tr="İç ünite kapasitelerinin mahal bazlı ısı yüküne göre seçimi, bakır hat çekimi ve vakum sonrası gaz şarjı." data-en="Indoor unit capacities selected per room heat load, refrigerant piping installed, evacuated and charged.">İç ünite kapasitelerinin mahal bazlı ısı yüküne göre seçimi, bakır hat çekimi ve vakum sonrası gaz şarjı.</span>
+            </li>
+            <li>
+              <b data-tr="Klima santrali" data-en="Air handling units">Klima santrali</b>
+              <span data-tr="Taze hava oranı, ısı geri kazanım verimi ve filtre kademeleri belirlenmiş santral seçimi ve montajı." data-en="Unit selection and installation with defined fresh-air ratio, heat recovery efficiency and filter stages.">Taze hava oranı, ısı geri kazanım verimi ve filtre kademeleri belirlenmiş santral seçimi ve montajı.</span>
+            </li>
+            <li>
+              <b data-tr="Kanal imalatı" data-en="Ductwork">Kanal imalatı</b>
+              <span data-tr="Galvaniz sac kanal imalatı, ısı ve ses izolasyonu, menfez ile damper montajı." data-en="Galvanised sheet duct fabrication, thermal and acoustic insulation, grille and damper installation.">Galvaniz sac kanal imalatı, ısı ve ses izolasyonu, menfez ile damper montajı.</span>
+            </li>
+            <li>
+              <b data-tr="Isı yükü hesabı" data-en="Heat load calculation">Isı yükü hesabı</b>
+              <span data-tr="Yapı kabuğu, cam oranı, aydınlatma ve iç kazançlar üzerinden mahal bazlı soğutma ve ısıtma yükü." data-en="Room-by-room cooling and heating load derived from envelope, glazing ratio, lighting and internal gains.">Yapı kabuğu, cam oranı, aydınlatma ve iç kazançlar üzerinden mahal bazlı soğutma ve ısıtma yükü.</span>
+            </li>
+            <li>
+              <b data-tr="Test · balanslama" data-en="Testing &amp; balancing">Test · balanslama</b>
+              <span data-tr="Hava debilerinin anemometre ile ölçülüp damperlerle proje değerine getirilmesi ve rapora bağlanması." data-en="Air flows measured with an anemometer, adjusted to design values via dampers and recorded in a report.">Hava debilerinin anemometre ile ölçülüp damperlerle proje değerine getirilmesi ve rapora bağlanması.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="disiplin-panel" id="d-yangin" role="tabpanel" hidden>
+        <div class="disiplin-gorsel">
+          <img src="assets/gorseller/hz-yangin.jpg" alt="Yangın Algılama ve Söndürme" loading="lazy">
+            <span class="hizmet-temsili" data-tr="Temsili görsel" data-en="Representative image">Temsili görsel</span>
+        </div>
+        <div class="disiplin-govde">
+          <h3 data-tr="Yangın Algılama ve Söndürme" data-en="Fire Detection &amp; Suppression">Yangın Algılama ve Söndürme</h3>
+          <ul class="disiplin-liste">
+            <li>
+              <b data-tr="Adresli algılama" data-en="Addressable detection">Adresli algılama</b>
+              <span data-tr="Dedektör ve buton yerleşimi, çevrim planı, panel programlaması ve senaryo testleri." data-en="Detector and call-point layout, loop planning, panel programming and cause-and-effect testing.">Dedektör ve buton yerleşimi, çevrim planı, panel programlaması ve senaryo testleri.</span>
+            </li>
+            <li>
+              <b data-tr="Sprinkler" data-en="Sprinklers">Sprinkler</b>
+              <span data-tr="Tehlike sınıfına göre sprinkler tipi ve koruma alanı seçimi; boru çapları hidrolik hesapla belirlenir." data-en="Sprinkler type and coverage selected by hazard class; pipe diameters set by hydraulic calculation.">Tehlike sınıfına göre sprinkler tipi ve koruma alanı seçimi; boru çapları hidrolik hesapla belirlenir.</span>
+            </li>
+            <li>
+              <b data-tr="Yangın dolabı" data-en="Hose cabinets">Yangın dolabı</b>
+              <span data-tr="Dolap yerleşiminin ve hortum erişim mesafelerinin yönetmelik şartlarına göre planlanması." data-en="Cabinet placement and hose reach distances planned to regulatory requirements.">Dolap yerleşiminin ve hortum erişim mesafelerinin yönetmelik şartlarına göre planlanması.</span>
+            </li>
+            <li>
+              <b data-tr="Duman tahliye" data-en="Smoke exhaust">Duman tahliye</b>
+              <span data-tr="Duman perdesi, jet fan veya kaçış yolu basınçlandırmasıyla tahliye güzergâhının temiz tutulması." data-en="Smoke curtains, jet fans or stairwell pressurisation keeping escape routes clear.">Duman perdesi, jet fan veya kaçış yolu basınçlandırmasıyla tahliye güzergâhının temiz tutulması.</span>
+            </li>
+            <li>
+              <b data-tr="Yangın pompası" data-en="Fire pumps">Yangın pompası</b>
+              <span data-tr="Ana, yedek ve jokey pompa grubunun kurulumu; performans testi ve otomatik devreye girme kontrolü." data-en="Main, standby and jockey pump set installed, performance tested and verified for automatic start.">Ana, yedek ve jokey pompa grubunun kurulumu; performans testi ve otomatik devreye girme kontrolü.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="disiplin-panel" id="d-otomasyon" role="tabpanel" hidden>
+        <div class="disiplin-gorsel">
+          <img src="assets/gorseller/hz-otomasyon.jpg" alt="Zayıf Akım ve Otomasyon" loading="lazy">
+            <span class="hizmet-temsili" data-tr="Temsili görsel" data-en="Representative image">Temsili görsel</span>
+        </div>
+        <div class="disiplin-govde">
+          <h3 data-tr="Zayıf Akım ve Otomasyon" data-en="Low Current &amp; Automation">Zayıf Akım ve Otomasyon</h3>
+          <ul class="disiplin-liste">
+            <li>
+              <b data-tr="CCTV · kamera" data-en="CCTV">CCTV · kamera</b>
+              <span data-tr="Kamera açısı, çözünürlük ve kayıt süresi hesaplanmış izleme sistemi; ağ ve depolama boyutlandırması dahil." data-en="Surveillance designed by field of view, resolution and retention, including network and storage sizing.">Kamera açısı, çözünürlük ve kayıt süresi hesaplanmış izleme sistemi; ağ ve depolama boyutlandırması dahil.</span>
+            </li>
+            <li>
+              <b data-tr="Geçiş kontrol" data-en="Access control">Geçiş kontrol</b>
+              <span data-tr="Kart veya biyometrik okuyucu, kapı donanımı ve yangın senaryosuyla entegre otomatik kilit açma." data-en="Card or biometric readers, door hardware and automatic release integrated with the fire scenario.">Kart veya biyometrik okuyucu, kapı donanımı ve yangın senaryosuyla entegre otomatik kilit açma.</span>
+            </li>
+            <li>
+              <b data-tr="Yapı otomasyonu" data-en="Building automation">Yapı otomasyonu</b>
+              <span data-tr="Isıtma, soğutma ve aydınlatmanın merkezi izlenmesi; zaman, sıcaklık ve varlık sensörüne bağlı senaryolar." data-en="Central monitoring of heating, cooling and lighting with schedule, temperature and occupancy scenarios.">Isıtma, soğutma ve aydınlatmanın merkezi izlenmesi; zaman, sıcaklık ve varlık sensörüne bağlı senaryolar.</span>
+            </li>
+            <li>
+              <b data-tr="Yapısal kablolama" data-en="Structured cabling">Yapısal kablolama</b>
+              <span data-tr="Kat dağıtım odaları, bakır ve fiber omurga; kanalların cihazla sertifikasyon ölçümü." data-en="Floor distribution rooms, copper and fibre backbone, with certified link testing.">Kat dağıtım odaları, bakır ve fiber omurga; kanalların cihazla sertifikasyon ölçümü.</span>
+            </li>
+            <li>
+              <b data-tr="Seslendirme" data-en="Public address">Seslendirme</b>
+              <span data-tr="Anons ve acil durum seslendirmesi; ses basıncı ve konuşma anlaşılabilirliği hesabına göre hoparlör yerleşimi." data-en="Public address and voice alarm with speaker layout set by sound pressure and speech intelligibility.">Anons ve acil durum seslendirmesi; ses basıncı ve konuşma anlaşılabilirliği hesabına göre hoparlör yerleşimi.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="disiplin-panel" id="d-insaat" role="tabpanel" hidden>
+        <div class="disiplin-gorsel">
+          <img src="assets/gorseller/hz-insaat.jpg" alt="İnşaat ve Taahhüt" loading="lazy">
+        </div>
+        <div class="disiplin-govde">
+          <h3 data-tr="İnşaat ve Taahhüt" data-en="Construction &amp; Contracting">İnşaat ve Taahhüt</h3>
+          <ul class="disiplin-liste">
+            <li>
+              <b data-tr="Anahtar teslim" data-en="Turnkey delivery">Anahtar teslim</b>
+              <span data-tr="İnşaat, mekanik ve elektrik işlerinin tamamının tek sözleşme ve tek şantiye şefliği altında yürütülmesi." data-en="Construction, mechanical and electrical scopes run under a single contract and one site management.">İnşaat, mekanik ve elektrik işlerinin tamamının tek sözleşme ve tek şantiye şefliği altında yürütülmesi.</span>
+            </li>
+            <li>
+              <b data-tr="Kaba yapı" data-en="Structural works">Kaba yapı</b>
+              <span data-tr="Bölme duvar örgüsü, lento ve hatıl imalatı; kapı-pencere boşluklarının doğrama ölçüsüne göre bırakılması." data-en="Partition blockwork, lintels and ring beams, with openings left to joinery dimensions.">Bölme duvar örgüsü, lento ve hatıl imalatı; kapı-pencere boşluklarının doğrama ölçüsüne göre bırakılması.</span>
+            </li>
+            <li>
+              <b data-tr="İnce yapı" data-en="Finishing works">İnce yapı</b>
+              <span data-tr="Alçı sıva ve saten, şap, seramik ve parke kaplama, doğrama ile boya işleri." data-en="Plaster and skim, screed, tiling and flooring, joinery and paint.">Alçı sıva ve saten, şap, seramik ve parke kaplama, doğrama ile boya işleri.</span>
+            </li>
+            <li>
+              <b data-tr="Tadilat · renovasyon" data-en="Renovation">Tadilat · renovasyon</b>
+              <span data-tr="Kullanımdaki yapıda etaplı çalışma; mevcut tesisatın tespiti, sökümü ve yenilenmesi." data-en="Phased works in occupied buildings: surveying, stripping out and renewing existing services.">Kullanımdaki yapıda etaplı çalışma; mevcut tesisatın tespiti, sökümü ve yenilenmesi.</span>
+            </li>
+            <li>
+              <b data-tr="Endüstriyel yapı" data-en="Industrial buildings">Endüstriyel yapı</b>
+              <span data-tr="Fabrika ve depo yapılarında saha betonu, ağır yük zeminleri ve makine temelleri." data-en="Site concrete, heavy-duty floors and machine foundations in factory and warehouse buildings.">Fabrika ve depo yapılarında saha betonu, ağır yük zeminleri ve makine temelleri.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="disiplin-panel" id="d-enh" role="tabpanel" hidden>
+        <div class="disiplin-gorsel">
+          <img src="assets/gorseller/hz-enh.jpg" alt="Enerji Nakil Hattı ve Trafo Merkezi" loading="lazy">
+        </div>
+        <div class="disiplin-govde">
+          <h3 data-tr="Enerji Nakil Hattı ve Trafo Merkezi" data-en="Power Transmission Lines &amp; Substations">Enerji Nakil Hattı ve Trafo Merkezi</h3>
+          <ul class="disiplin-liste">
+            <li>
+              <b data-tr="ENH direk montajı" data-en="Pole erection">ENH direk montajı</b>
+              <span data-tr="Güzergâh aplikasyonu, temel imalatı ve direk dikimi; zemin durumuna göre temel tipi seçimi." data-en="Route setting out, foundation construction and pole erection, with foundation type chosen for the ground conditions.">Güzergâh aplikasyonu, temel imalatı ve direk dikimi; zemin durumuna göre temel tipi seçimi.</span>
+            </li>
+            <li>
+              <b data-tr="İletken çekimi" data-en="Conductor stringing">İletken çekimi</b>
+              <span data-tr="Salgı hesabına göre iletken çekimi, izolatör ve armatür montajı, gerdirme ve emniyet mesafesi kontrolü." data-en="Conductor stringing to sag calculation, insulator and fitting installation, tensioning and clearance checks.">Salgı hesabına göre iletken çekimi, izolatör ve armatür montajı, gerdirme ve emniyet mesafesi kontrolü.</span>
+            </li>
+            <li>
+              <b data-tr="Trafo merkezi · köşk" data-en="Substation &amp; kiosk">Trafo merkezi · köşk</b>
+              <span data-tr="Beton köşk veya bina tipi merkezde güç trafosu, orta gerilim hücre grubu ve alçak gerilim panosunun yerleşimi." data-en="Power transformer, MV switchgear and LV panel arranged in a concrete kiosk or indoor substation.">Beton köşk veya bina tipi merkezde güç trafosu, orta gerilim hücre grubu ve alçak gerilim panosunun yerleşimi.</span>
+            </li>
+            <li>
+              <b data-tr="OG hücre · koruma rölesi" data-en="MV switchgear &amp; protection relay">OG hücre · koruma rölesi</b>
+              <span data-tr="Kesici, ayırıcı, akım ve gerilim trafoları; röle ayarlarının seçicilik hesabına göre girilmesi ve test edilmesi." data-en="Breakers, disconnectors, current and voltage transformers; relay settings entered and tested per the discrimination study.">Kesici, ayırıcı, akım ve gerilim trafoları; röle ayarlarının seçicilik hesabına göre girilmesi ve test edilmesi.</span>
+            </li>
+            <li>
+              <b data-tr="Enerji müsaadesi ve kabul" data-en="Utility approval &amp; acceptance">Enerji müsaadesi ve kabul</b>
+              <span data-tr="Proje onayı, dağıtım şirketi kabul süreci, sayaç noktası ve geçici kabul dosyasının hazırlanması." data-en="Design approval, utility acceptance process, metering point and preparation of the provisional acceptance file.">Proje onayı, dağıtım şirketi kabul süreci, sayaç noktası ve geçici kabul dosyasının hazırlanması.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="disiplin-panel" id="d-ges" role="tabpanel" hidden>
+        <div class="disiplin-gorsel">
+          <img src="assets/gorseller/hz-ges.jpg" alt="Güneş Enerji Santrali (GES)" loading="lazy">
+        </div>
+        <div class="disiplin-govde">
+          <h3 data-tr="Güneş Enerji Santrali (GES)" data-en="Solar Power Plants (PV)">Güneş Enerji Santrali (GES)</h3>
+          <ul class="disiplin-liste">
+            <li>
+              <b data-tr="Arazi tipi GES" data-en="Ground-mounted PV">Arazi tipi GES</b>
+              <span data-tr="Saha etüdü ve fizibilite, konstrüksiyon montajı, panel ve DC string tesisi, saha içi kablolama." data-en="Site survey and feasibility, mounting structures, panel and DC string installation, on-site cabling.">Saha etüdü ve fizibilite, konstrüksiyon montajı, panel ve DC string tesisi, saha içi kablolama.</span>
+            </li>
+            <li>
+              <b data-tr="Çatı GES" data-en="Rooftop PV">Çatı GES</b>
+              <span data-tr="Çatı yükü kontrolü, taşıyıcı ve sızdırmazlık detayları, öz tüketim hesabı ve yangın güvenliği." data-en="Roof load check, mounting and waterproofing details, self-consumption analysis and fire safety.">Çatı yükü kontrolü, taşıyıcı ve sızdırmazlık detayları, öz tüketim hesabı ve yangın güvenliği.</span>
+            </li>
+            <li>
+              <b data-tr="İnverter · trafo" data-en="Inverter &amp; transformer">İnverter · trafo</b>
+              <span data-tr="String veya santral tipi inverter seçimi, trafo istasyonu kurulumu ve DC/AC kablolama." data-en="String or central inverter selection, transformer station installation and DC/AC cabling.">String veya santral tipi inverter seçimi, trafo istasyonu kurulumu ve DC/AC kablolama.</span>
+            </li>
+            <li>
+              <b data-tr="Şebeke bağlantısı" data-en="Grid connection">Şebeke bağlantısı</b>
+              <span data-tr="Orta gerilim hücresi, koruma koordinasyonu, sayaç noktası ve devreye alma ölçümleri." data-en="MV switchgear, protection coordination, metering point and commissioning measurements.">Orta gerilim hücresi, koruma koordinasyonu, sayaç noktası ve devreye alma ölçümleri.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

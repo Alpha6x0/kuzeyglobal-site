@@ -309,6 +309,52 @@ p { color: var(--metin-yumusak); }
 
 /* ---------- hizmetler ---------- */
 
+/* --- Disiplin detay paneli: 8 sekme, kalem kalem kapsam --- */
+.disiplin { margin-top: 46px; }
+.disiplin-ust { margin-bottom: 20px; }
+.disiplin-baslik {
+  font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--metin-gri); margin-bottom: 8px;
+}
+.disiplin-ust p { font-size: .95rem; color: var(--metin-gri); max-width: 70ch; }
+
+.disiplin-sekmeler {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px;
+  padding-bottom: 18px; border-bottom: 1px solid var(--cizgi);
+}
+.disiplin-sekme {
+  font: inherit; font-size: .86rem; font-weight: 600; cursor: pointer;
+  padding: 9px 16px; border-radius: 100px;
+  background: transparent; color: var(--metin-gri);
+  border: 1px solid var(--cizgi); transition: var(--gecis);
+}
+.disiplin-sekme:hover { color: var(--metin); border-color: rgba(226, 96, 28, .45); }
+.disiplin-sekme.etkin {
+  background: var(--turuncu); color: #fff; border-color: var(--turuncu);
+}
+
+.disiplin-panel { display: grid; grid-template-columns: 300px 1fr; gap: 30px; align-items: start; }
+.disiplin-panel[hidden] { display: none; }
+.disiplin-gorsel {
+  position: relative; aspect-ratio: 4 / 3; overflow: hidden;
+  border-radius: 10px; border: 1px solid var(--cizgi); background: var(--yuzey);
+}
+.disiplin-gorsel img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.disiplin-govde h3 { font-size: 1.14rem; margin-bottom: 16px; }
+.disiplin-liste { display: grid; gap: 14px; }
+.disiplin-liste li {
+  padding-left: 16px; border-left: 2px solid var(--cizgi);
+  transition: border-color .3s ease;
+}
+.disiplin-liste li:hover { border-left-color: var(--turuncu); }
+.disiplin-liste b { display: block; font-size: .94rem; margin-bottom: 3px; }
+.disiplin-liste span { display: block; font-size: .88rem; line-height: 1.55; color: var(--metin-gri); }
+
+@media (max-width: 860px) {
+  .disiplin-panel { grid-template-columns: 1fr; gap: 22px; }
+  .disiplin-gorsel { aspect-ratio: 16 / 9; }
+}
+
 .hizmet-izgara { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .hizmet {
   background: var(--kart-zemin); padding: 38px 32px 34px;

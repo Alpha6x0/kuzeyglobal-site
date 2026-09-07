@@ -312,6 +312,35 @@
     });
   }
 
+  // ======================= DISIPLIN SEKMELERI =======================
+  // Hizmet kalemlerinin detayi: bir anda tek panel acik durur. Paneller
+  // `hidden` ozniteligiyle gizlenir; boylece kapali panelin icerigi
+  // Google'in gordugu HTML'de kalir ama ekran okuyucuya sunulmaz.
+
+  var disiplinSekmeleri = document.querySelectorAll('.disiplin-sekme');
+
+  if (disiplinSekmeleri.length) {
+    var disiplinPanelleri = document.querySelectorAll('.disiplin-panel');
+
+    disiplinSekmeleri.forEach(function (sekme) {
+      sekme.addEventListener('click', function () {
+        var hedef = sekme.getAttribute('data-panel');
+
+        disiplinSekmeleri.forEach(function (s) {
+          var secili = s === sekme;
+          s.classList.toggle('etkin', secili);
+          s.setAttribute('aria-selected', secili ? 'true' : 'false');
+        });
+
+        disiplinPanelleri.forEach(function (p) {
+          var acik = p.id === hedef;
+          p.hidden = !acik;
+          p.classList.toggle('etkin', acik);
+        });
+      });
+    });
+  }
+
   // ======================= YIL =======================
 
   var yil = document.getElementById('yil');
