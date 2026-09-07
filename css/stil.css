@@ -742,6 +742,16 @@ p { color: var(--metin-yumusak); }
 
 @media (max-width: 720px) { .ges-serit-izgara { grid-template-columns: repeat(2, 1fr); } }
 
+/* --- Kaba/ince yapi bolumu: kart gorseli uzerindeki asama rozeti --- */
+.yapi-asama {
+  position: absolute; left: 10px; top: 10px; z-index: 2;
+  font-size: .68rem; font-weight: 700; letter-spacing: .04em;
+  padding: 5px 10px; border-radius: 999px;
+  background: rgba(15, 24, 34, .78); color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+
 /* GES karti: yedinci hizmet, satiri boydan boya kaplar (3 sutunda tek basina
    kalirsa kirik durur) ve GES bolumune yonlendirir. */
 .hizmet-genis {
@@ -759,6 +769,7 @@ p { color: var(--metin-yumusak); }
   padding: 12px 20px; transition: var(--gecis);
 }
 .hizmet-git svg { width: 16px; height: 16px; }
+.hizmet-git-alt { margin-top: 20px; }
 .hizmet-git:hover { background: var(--turuncu); color: #fff; border-color: var(--turuncu); }
 
 @media (max-width: 720px) {
@@ -807,7 +818,7 @@ p { color: var(--metin-yumusak); }
    768px'lik tablette (iPad dikey) 890px'e ulasip sayfayi yana kaydiriyordu.
    Hamburger artik 900px altinda devreye giriyor. Degerler 720px blogundakiyle
    ayni; o blok 720 altinda ayrica gecerli kalmaya devam ediyor. */
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .menu {
     position: fixed; inset: 78px 0 auto; flex-direction: column; align-items: stretch; gap: 0;
     background: var(--murekkep-2); border-bottom: 1px solid var(--cizgi);
@@ -826,4 +837,4 @@ p { color: var(--metin-yumusak); }
    diye dort satira dusuyordu. Adres de 900px altinda gizlenir (alt bilgide ve
    iletisim bolumunde tam hali duruyor). */
 .ust-serit-sag a[href^="tel"] { white-space: nowrap; }
-@media (max-width: 900px) { .ust-serit-adres { display: none; } }
+@media (max-width: 980px) { .ust-serit-adres { display: none; } }
