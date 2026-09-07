@@ -258,8 +258,14 @@ p { color: var(--metin-yumusak); }
 }
 .vitrin .kenar { position: relative; z-index: 2; }
 
-.vitrin-ic { max-width: 780px; padding: 128px 0 96px; }
-.vitrin h1 { margin-bottom: 26px; text-shadow: 0 2px 30px rgba(0, 0, 0, .5); }
+/* Baslik buyudugu icin ust/alt bosluk kisildi: yoksa "Projenizi
+   konusalim" dugmesi 900 px yuksekligindeki ekranda katlanin altina
+   dusuyordu (olculdu: 932 px). */
+.vitrin-ic { max-width: 940px; padding: 62px 0 72px; }
+/* Vitrin basligi sayfanin ilk ve en guclu cumlesi; genel h1 olcusunden
+   bilerek buyuk. Kutu 780 -> 940 px genisletildi, yoksa buyuyen yazi
+   fazladan satira kiriliyordu. */
+.vitrin h1 { font-size: clamp(2.8rem, 6.9vw, 5.5rem); line-height: 1.04; margin-bottom: 18px; text-shadow: 0 2px 30px rgba(0, 0, 0, .5); }
 .vitrin h1 em { font-style: normal; color: var(--turuncu-parlak); }
 .vitrin-metin { font-size: 1.13rem; max-width: 600px; color: var(--metin-yumusak); }
 .vitrin-dugmeler { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 40px; }
