@@ -995,3 +995,58 @@ p { color: var(--metin-yumusak); }
    iletisim bolumunde tam hali duruyor). */
 .ust-serit-sag a[href^="tel"] { white-space: nowrap; }
 @media (max-width: 1080px) { .ust-serit-adres { display: none; } }
+
+/* ---------- katalog sayfasi (katalog.html) ---------- */
+
+/* Flipbook disaridan cerceve icinde geliyor; olcusu sabit degil, bu yuzden
+   en-boy orani veriliyor ve ekran yuksekliginin ustune tasmasi engelleniyor. */
+.katalog-bolum .bolum-giris { max-width: 780px; margin-bottom: 40px; }
+.katalog-bolum h1 { font-size: clamp(2.1rem, 4.6vw, 3.5rem); }
+.katalog-bolum .katalog-giris { font-size: 1.07rem; margin-top: 18px; color: var(--metin-gri); }
+
+.katalog-cerceve {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.55 / 1;
+  max-height: 78vh;
+  background: var(--kart-zemin);
+  border: 1px solid var(--cizgi);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--kart-golge);
+}
+.katalog-cerceve iframe {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  border: 0; display: block;
+}
+
+.katalog-dugmeler { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+
+.katalog-not { margin-top: 24px; max-width: 660px; font-size: .9rem; color: var(--metin-gri); }
+.katalog-not b { color: var(--metin); font-weight: 600; }
+
+@media (max-width: 760px) {
+  /* dar ekranda flipbook tek sayfa gosteriyor, cerceve de dikey olmali */
+  .katalog-cerceve { aspect-ratio: 3 / 4; max-height: 72vh; }
+  .katalog-dugmeler .dugme { flex: 1 1 100%; justify-content: center; }
+}
+
+/* katalog cagrisi: projeler bolumunun sonunda */
+.katalog-cagri {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 26px;
+  margin-top: 44px; padding: 34px 38px;
+  background: var(--kart-zemin);
+  border: 1px solid var(--cizgi);
+  border-left: 4px solid var(--turuncu);
+  border-radius: 14px;
+}
+.katalog-cagri h3 { font-size: 1.32rem; margin-bottom: 10px; }
+.katalog-cagri p { max-width: 640px; color: var(--metin-gri); font-size: .99rem; }
+.katalog-cagri .dugme { flex-shrink: 0; }
+
+@media (max-width: 700px) {
+  .katalog-cagri { padding: 26px 24px; }
+  .katalog-cagri .dugme { width: 100%; justify-content: center; }
+}
