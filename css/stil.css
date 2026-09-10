@@ -611,7 +611,12 @@ p { color: var(--metin-yumusak); }
 }
 .iletisim-kalem .ikon svg { width: 19px; height: 19px; stroke: var(--turuncu); }
 .iletisim-kalem h4 { font-size: .76rem; letter-spacing: .14em; text-transform: uppercase; color: var(--metin-gri); font-weight: 700; margin-bottom: 6px; }
-.iletisim-kalem p, .iletisim-kalem a { font-size: .96rem; color: var(--metin-yumusak); display: block; }
+/* e-posta adresi bolunemeyen tek kelime; dar ekranda ikonun yanina
+   sigmayip sayfayi yatay kaydiriyordu (olculdu, 382 > 375 px). */
+.iletisim-kalem p, .iletisim-kalem a {
+  font-size: .96rem; color: var(--metin-yumusak); display: block;
+  overflow-wrap: anywhere;
+}
 .iletisim-kalem a:hover { color: var(--turuncu); }
 .harita {
   margin-top: 24px; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden;
