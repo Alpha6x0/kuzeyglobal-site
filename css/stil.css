@@ -572,13 +572,13 @@ p { color: var(--metin-yumusak); }
 
 /* ---------- iletisim ---------- */
 
-.iletisim { display: grid; grid-template-columns: 1.05fr .95fr; gap: 60px; }
+.iletisim { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr); gap: 60px; }
 
-.form-satir { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-satir { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; }
 .alan { margin-bottom: 18px; }
 .alan label { display: block; font-size: .82rem; color: var(--metin-gri); margin-bottom: 8px; letter-spacing: .03em; font-weight: 500; }
 .alan input, .alan select, .alan textarea {
-  width: 100%; padding: 14px 16px;
+  width: 100%; min-width: 0; max-width: 100%; padding: 14px 16px;
   background: var(--kart-zemin); border: 1px solid var(--cizgi); border-radius: 8px;
   color: var(--metin); font-family: var(--yazi-govde); font-size: .95rem;
   transition: border-color .25s, box-shadow .25s;
@@ -667,7 +667,7 @@ p { color: var(--metin-yumusak); }
   .surec::before { display: none; }
   .sektor-izgara { grid-template-columns: repeat(2, 1fr); }
   .hakkinda { grid-template-columns: 1fr; gap: 52px; }
-  .iletisim { grid-template-columns: 1fr; gap: 48px; }
+  .iletisim { grid-template-columns: minmax(0, 1fr); gap: 48px; }
   .alt-ic { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 
@@ -697,7 +697,7 @@ p { color: var(--metin-yumusak); }
   .rakam:nth-child(even) { border-left: 1px solid var(--cizgi); }
 
   .hizmet-izgara, .proje-izgara, .surec, .sektor-izgara, .alt-ic { grid-template-columns: 1fr; }
-  .form-satir { grid-template-columns: 1fr; gap: 0; }
+  .form-satir { grid-template-columns: minmax(0, 1fr); gap: 0; }
   .hizmet { padding: 32px 26px; }
   .hizmet-gorsel { margin: -32px -26px 22px; }
   .cagri .kenar { flex-direction: column; align-items: flex-start; }
